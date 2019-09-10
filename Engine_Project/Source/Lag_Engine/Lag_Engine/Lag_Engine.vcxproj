@@ -73,23 +73,23 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)../../Game/$(ProjectName)/$(Configuration)</OutDir>
-    <IntDir>$(Configuration)../../Temp$(ProjectName)/$(Configuration)</IntDir>
+    <OutDir>$(SolutionDir)../../Game/$(Platform)/$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)../../Temp/$(Platform)/$(Configuration)</IntDir>
     <TargetName>$(ProjectName)-$(Platform)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)../../Game/$(ProjectName)/$(Configuration)</OutDir>
-    <IntDir>$(Configuration)../../Temp$(ProjectName)/$(Configuration)</IntDir>
+    <OutDir>$(SolutionDir)../../Game/$(Platform)/$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)../../Temp/$(Platform)/$(Configuration)</IntDir>
     <TargetName>$(ProjectName)-$(Platform)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)../../Game/$(ProjectName)/$(Configuration)</OutDir>
-    <IntDir>$(Configuration)../../Temp$(ProjectName)/$(Configuration)</IntDir>
+    <OutDir>$(SolutionDir)../../Game/$(Platform)/$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)../../Temp/$(Platform)/$(Configuration)</IntDir>
     <TargetName>$(ProjectName)-$(Platform)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)../../Game/$(ProjectName)/$(Configuration)</OutDir>
-    <IntDir>$(Configuration)../../Temp$(ProjectName)/$(Configuration)</IntDir>
+    <OutDir>$(SolutionDir)../../Game/$(Platform)/$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)../../Temp/$(Platform)/$(Configuration)</IntDir>
     <TargetName>$(ProjectName)-$(Platform)-$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
