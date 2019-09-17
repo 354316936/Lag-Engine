@@ -9,10 +9,18 @@ const DWORDLONG vRAMNeed = 1;
 
 using namespace std;
 bool IsOnlyInstance(LPCTSTR gameTitle);
+bool CheckStorage(const DWORDLONG diskSpaceNeeded);
 
 
 int main()
 {
+	bool storageCheck;
+	storageCheck = CheckStorage(storageNeed);
+	if (storageCheck == true)
+	{
+		cout << "You hava enough storage!" << endl;
+	}
+
 	bool instanceCheck;
 	LPCTSTR GT = "Engine";
 	instanceCheck = IsOnlyInstance(GT);
@@ -40,3 +48,20 @@ bool IsOnlyInstance(LPCTSTR gameTitle)
 	return true;
 }
 
+bool CheckStorage(const DWORDLONG diskSpaceNeeded)
+{
+	int const drive = _getdrive();
+	struct _diskfree_t diskfree;
+	_getdiskfree(drive, &diskfree);
+	unsigned __int64 neededClusters;
+	neededClusters = diskSpaceNeeded /
+		(diskfree.sectors_per_cluster *
+			diskfree.bytes_per_sector);
+	if (diskfree.avail_clusters < neededClusters)
+	{
+		cout << "CheckStorage Failure: Not enough physical storage." << endl;
+		return false;
+
+	}
+	return true;
+}
