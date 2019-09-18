@@ -33,7 +33,14 @@ int main()
 		std::cout << "Hey! don't try to cheat on the game\n";
 	}
 
-	CheckMemory(0, 0);
+	if (CheckMemory(2e+6, 2e+6))
+	{
+		std::cout << "You have enough memory\n";
+	}
+	else
+	{
+		std::cout << "You don't have enough memory\n";
+	}
 	return 0;
 }
 
