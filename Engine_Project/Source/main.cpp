@@ -31,7 +31,7 @@ int main()
 	return 0;
 }
 
-
+ 
 bool IsOnlyInstance(LPCTSTR gameTitle)
 {
 	HANDLE handle = CreateMutex(NULL, TRUE, gameTitle);
@@ -48,7 +48,9 @@ bool IsOnlyInstance(LPCTSTR gameTitle)
 	return true;
 }
 
-bool CheckStorage(const DWORDLONG diskSpaceNeeded)
+
+
+bool CheckStorage(const DWORDLONG diskSpaceNeeded)
 {
 	int const drive = _getdrive();
 	struct _diskfree_t diskfree;
