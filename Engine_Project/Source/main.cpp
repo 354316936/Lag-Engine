@@ -5,6 +5,64 @@
 #include <direct.h>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 typedef unsigned long DWORD, * PDWORD, * LPDWORD;
 typedef ULONGLONG DWORDLONG, *PDWORDLONG;
 
