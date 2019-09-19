@@ -6,7 +6,17 @@
 #define DIV 1024
 #define WIDTH 7
 
+
 typedef unsigned long DWORD, *PDWORD, *LPDWORD;
+
+#include <atlstr.h >
+#include <atlbase.h>
+#define DIV 1024
+#define WIDTH 7
+
+
+typedef unsigned long DWORD, * PDWORD, * LPDWORD;
+
 typedef ULONGLONG DWORDLONG, *PDWORDLONG;
 
 
@@ -16,6 +26,12 @@ const DWORDLONG vRAMNeed = 1;
 
 
 using namespace std;
+
+
+
+
+extern bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded);
+
 bool IsOnlyInstance(LPCTSTR gameTitle);
 extern bool CheckStorage(const DWORDLONG diskSpaceNeeded);
 extern DWORD ReadCPUSpeed();
@@ -27,6 +43,7 @@ extern bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtu
 
 int main()
 {
+
 	if (CheckStorage(307200))//can pass the function to if() directly
 	{
 		std::cout << "You have 300 MB available storage\n";
@@ -35,6 +52,21 @@ int main()
 	{
 		std::cout << "No enought space to install the game\n";
 	}
+
+	//std::cout << "Hello World" << std::endl;
+
+
+	if (CheckMemory(2e+6, 2e+6))
+	{
+		std::cout << "You have enough memory\n";
+	}
+
+	else
+	{
+		std::cout << "You don't have enough memory\n";
+
+
+
 	bool instanceCheck;
 	LPCTSTR GT = "Engine";
 	instanceCheck = IsOnlyInstance(GT);
@@ -52,25 +84,13 @@ int main()
 		std::cout << "You don't have enough memory\n";
 	}
 
-	return 0;
-}
 
 
 
-bool IsOnlyInstance(LPCTSTR gameTitle)
-{
-	HANDLE handle = CreateMutex(NULL, TRUE, gameTitle);
-	if (GetLastError() != ERROR_SUCCESS) {
-		HWND hWnd = FindWindow(gameTitle, NULL);
-		if (hWnd) {
-			ShowWindow(hWnd, SW_SHOWNORMAL);
-			SetFocus(hWnd);
-			SetForegroundWindow(hWnd);
-			SetActiveWindow(hWnd);
-			return false;
-		}
 	}
-	return true;
+	getchar();
+
+	return 0;
 }
 
 
@@ -159,4 +179,5 @@ bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNe
 	}
 	return true;
 }
+
 
