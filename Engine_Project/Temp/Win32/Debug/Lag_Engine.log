@@ -1,5 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  main.cpp
-c:\users\tech\documents\github\lag-engine\engine_project\source\main.cpp(36): warning C4244: 'argument': conversion from 'double' to 'const DWORDLONG', possible loss of data
-  Lag_Engine.vcxproj -> C:\Users\Tech\Documents\GitHub\Lag-Engine\Engine_Project\Source\Lag_Engine\../../Game/Win32/Debug\Lag_Engine-Win32-Debug.exe
