@@ -30,7 +30,6 @@ using namespace std;
 
 
 
-extern bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded);
 
 bool IsOnlyInstance(LPCTSTR gameTitle);
 extern bool CheckStorage(const DWORDLONG diskSpaceNeeded);
@@ -65,7 +64,7 @@ int main()
 	{
 		std::cout << "You don't have enough memory\n";
 
-
+	}
 
 	bool instanceCheck;
 	LPCTSTR GT = "Engine";
@@ -75,25 +74,34 @@ int main()
 		cout << "The game instance check success!" << endl;
 	}
 	ReadCPUSpeed();
-	if (CheckMemory(2e+6, 2e+6))
-	{
-		std::cout << "You have enough memory\n";
-	}
-	else
-	{
-		std::cout << "You don't have enough memory\n";
-	}
-
-
-
-
-	}
 	getchar();
 
 	return 0;
 }
 
+bool IsOnlyInstance(const TCHAR* gameTitle)
+{
+	// Find the window.  If active, set and return false
+	// Only one game instance may have this mutex at a time...
 
+	HANDLE handle = CreateMutex(NULL, TRUE, gameTitle);
+
+	// Does anyone else think 'ERROR_SUCCESS' is a bit of an oxymoron?
+	if (GetLastError() != ERROR_SUCCESS)
+	{
+		HWND hWnd = FindWindow(gameTitle, NULL);
+		if (hWnd)
+		{
+			// An instance of your game is already running.
+			ShowWindow(hWnd, SW_SHOWNORMAL);
+			SetFocus(hWnd);
+			SetForegroundWindow(hWnd);
+			SetActiveWindow(hWnd);
+			return false;
+		}
+	}
+	return true;
+}
 
 bool CheckStorage(const DWORDLONG diskSpaceNeeded)
 {
