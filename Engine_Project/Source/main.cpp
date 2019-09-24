@@ -3,6 +3,8 @@
 #include <windowsx.h>
 #include <shlobj.h>
 #include <direct.h>
+#include <stdio.h>
+#include <tchar.h>
 #define DIV 1024
 #define WIDTH 7
 
