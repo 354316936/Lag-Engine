@@ -79,7 +79,8 @@ int main()
 	return 0;
 }
 
-bool IsOnlyInstance(const TCHAR* gameTitle)
+ 
+bool IsOnlyInstance(LPCTSTR gameTitle)
 {
 	// Find the window.  If active, set and return false
 	// Only one game instance may have this mutex at a time...
@@ -116,7 +117,7 @@ bool CheckStorage(const DWORDLONG diskSpaceNeeded)
 
 	if (diskfree.avail_clusters < neededClusters)
 	{
-		// if you get here you donít have enough disk space!
+		// if you get here you donï¿½t have enough disk space!
 		std::cout << "CheckStorage Failure: Not enough physical storage." << std::endl;
 		return false;
 	}
@@ -156,7 +157,7 @@ bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNe
 	GlobalMemoryStatusEx(&status);
 	if (status.ullTotalPhys < physicalRAMNeeded)
 	{
-		// you donít have enough physical memory. Tell the player to go get a real 
+		// you donï¿½t have enough physical memory. Tell the player to go get a real 
 		// computer and give this one to his mother. 
 		std::cout << "CheckMemory Failure: Not enough physical memory." << std::endl;
 		return false;
@@ -168,7 +169,7 @@ bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNe
 	// Check for enough free memory.
 	if (status.ullAvailVirtual < virtualRAMNeeded)
 	{
-		// you donít have enough virtual memory available. 
+		// you donï¿½t have enough virtual memory available. 
 		// Tell the player to shut down the copy of Visual Studio running in the
 		// background, or whatever seems to be sucking the memory dry.
 		std::cout << "CheckMemory Failure: Not enough virtual memory." << std::endl;
@@ -180,7 +181,7 @@ bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNe
 	if (buff)
 		delete[] buff;
 	else{
-		// even though there is enough memory, it isnít available in one 
+		// even though there is enough memory, it isnï¿½t available in one 
 		// block, which can be critical for games that manage their own memory
 		std::cout << "CheckMemory Failure: Not enough contiguous available memory." << std::endl;
 		return false;
