@@ -21,7 +21,7 @@ void Check()
 	}
 	else if (!Init.IsOnlyInstance(Title)) {
 		std::cout << "Game Fails \n";
-
+		exit(0);
 	}
 
 	if (Init.CheckMemory(2e+6, 2e+6))

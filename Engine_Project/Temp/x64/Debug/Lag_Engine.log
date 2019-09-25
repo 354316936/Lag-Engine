@@ -1,7 +1,5 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Intermediate 目录。
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   main.cpp
-c:\users\family\documents\lag-engine\engine_project\source\main.cpp(27): warning C4244: “参数”: 从“double”转换到“const Initialization::DWORDLONG”，可能丢失数据
-  Initialization.cpp
-  正在生成代码...
-  Lag_Engine.vcxproj -> C:\Users\Family\Documents\Lag-Engine\Engine_Project\Source\Lag_Engine\../../Game/x64/Debug\Lag_Engine-x64-Debug.exe
+c:\users\lucianz\documents\github\lag-engine\engine_project\source\main.cpp(27): warning C4244: 'argument': conversion from 'double' to 'const Initialization::DWORDLONG', possible loss of data
+  Lag_Engine.vcxproj -> C:\Users\LucianZ\Documents\GitHub\Lag-Engine\Engine_Project\Source\Lag_Engine\../../Game/x64/Debug\Lag_Engine-x64-Debug.exe
