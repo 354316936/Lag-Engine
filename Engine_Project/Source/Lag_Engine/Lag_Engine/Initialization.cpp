@@ -4,7 +4,8 @@
 
 
 using namespace std;
-DWORD ReadCPUSpeed()
+
+DWORD Initialization::ReadCPUSpeed()
 {
 	DWORD BufSize = sizeof(DWORD);
 	DWORD dwMHz = 0;
@@ -29,7 +30,7 @@ DWORD ReadCPUSpeed()
 }
 // CheckMemory
 //
-bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded)
+bool Initialization::CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded)
 {
 	MEMORYSTATUSEX status;
 	status.dwLength = sizeof(status);
@@ -71,7 +72,7 @@ bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNe
 	return true;
 }
 
-bool CheckStorage(const DWORDLONG diskSpaceNeeded)
+bool Initialization::CheckStorage(const DWORDLONG diskSpaceNeeded)
 {
 	// Check for enough free disk space on the current disk.
 	int const drive = _getdrive();
@@ -91,10 +92,7 @@ bool CheckStorage(const DWORDLONG diskSpaceNeeded)
 	return true;
 }
 
-
-
-
-bool IsOnlyInstance(LPCTSTR gameTitle)
+bool Initialization::IsOnlyInstance(LPCTSTR gameTitle)
 {
 	// Find the window.  If active, set and return false
 	// Only one game instance may have this mutex at a time...
@@ -120,4 +118,12 @@ bool IsOnlyInstance(LPCTSTR gameTitle)
 
 	return true;
 
+}
+
+Initialization::Initialization()
+{
+}
+
+Initialization::~Initialization()
+{
 }

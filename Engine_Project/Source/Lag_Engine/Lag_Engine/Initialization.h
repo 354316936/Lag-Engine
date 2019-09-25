@@ -9,14 +9,20 @@
 #define DIV 1024
 #define WIDTH 7
 
+class Initialization{
+public:
+		Initialization();
+		~Initialization();
 
-typedef unsigned long DWORD, *PDWORD, *LPDWORD;
-typedef ULONGLONG DWORDLONG, *PDWORDLONG;
+		typedef unsigned long DWORD, *PDWORD, *LPDWORD;
+		typedef ULONGLONG DWORDLONG, *PDWORDLONG;
 
 
 
 
-extern bool CheckStorage(const DWORDLONG diskSpaceNeeded);
-extern DWORD ReadCPUSpeed();
-extern bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded);
-extern bool IsOnlyInstance(LPCTSTR gameTitle);
+		 bool CheckStorage(const DWORDLONG diskSpaceNeeded);
+		 DWORD ReadCPUSpeed();
+		 bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded);
+		 bool IsOnlyInstance(LPCTSTR gameTitle);
+
+};

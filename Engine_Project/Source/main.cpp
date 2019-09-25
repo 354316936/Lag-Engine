@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Lag_Engine/Lag_Engine/Initialization.h"
 
-
+Initialization Init;
 void Check()
 {
-	ReadCPUSpeed();
-	if (CheckStorage(307200))//can pass the function to if() directly
+	Init.ReadCPUSpeed();
+	if (Init.CheckStorage(307200))//can pass the function to if() directly
 	{
 		std::cout << "You have 300 MB available storage\n";
 	}
@@ -15,16 +15,16 @@ void Check()
 	}
 
 	const TCHAR* Title = "Game";
-	if (IsOnlyInstance(Title))
+	if (Init.IsOnlyInstance(Title))
 	{
 		std::cout << "Game SUCCESS \n";
 	}
-	else if (!IsOnlyInstance(Title)) {
+	else if (!Init.IsOnlyInstance(Title)) {
 		std::cout << "Game Fails \n";
 
 	}
 
-	if (CheckMemory(2e+6, 2e+6))
+	if (Init.CheckMemory(2e+6, 2e+6))
 	{
 		std::cout << "You have enough memory\n";
 	}

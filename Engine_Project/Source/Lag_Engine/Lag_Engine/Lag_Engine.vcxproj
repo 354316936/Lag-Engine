@@ -23,7 +23,6 @@
     <ClCompile Include="Initialization.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\main.h" />
     <ClInclude Include="Initialization.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
