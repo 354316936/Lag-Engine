@@ -9,18 +9,12 @@ int DisplayResourceNAMessageBox()
 		NULL,
 		"You can't open two windows?",
 		" ",
-		MB_ICONWARNING | MB_CANCELTRYCONTINUE | MB_DEFBUTTON2
+		MB_OK
 	);
 
 	switch (msgboxID)
 	{
 	case IDOK:
-		exit(0);
-		break;
-	case IDTRYAGAIN:
-		exit(0);
-		break;
-	case IDCANCEL:
 		exit(0);
 		break;
 	}
