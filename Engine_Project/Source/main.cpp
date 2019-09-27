@@ -2,6 +2,31 @@
 #include "Lag_Engine/Lag_Engine/Initialization.h"
 
 Initialization Init;
+
+int DisplayResourceNAMessageBox()
+{
+	int msgboxID = MessageBox(
+		NULL,
+		"You can't open two windows?",
+		" ",
+		MB_ICONWARNING | MB_CANCELTRYCONTINUE | MB_DEFBUTTON2
+	);
+
+	switch (msgboxID)
+	{
+	case IDOK:
+		exit(0);
+		break;
+	case IDTRYAGAIN:
+		exit(0);
+		break;
+	case IDCANCEL:
+		exit(0);
+		break;
+	}
+
+	return msgboxID;
+}
 void Check()
 {
 	Init.ReadCPUSpeed();
@@ -29,7 +54,7 @@ void Check()
 	}
 	else if (!Init.IsOnlyInstance(Title)) {
 		std::cout << "Game Fails \n";
-		exit(0);
+		DisplayResourceNAMessageBox();
 	}
 
 	
