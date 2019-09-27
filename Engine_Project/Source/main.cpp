@@ -13,7 +13,15 @@ void Check()
 	{
 		std::cout << "No enought space to install the game\n";
 	}
+	if (Init.CheckMemory(2e+6, 2e+6))
+	{
+		std::cout << "You have enough memory\n";
+	}
+	else
+	{
+		std::cout << "You don't have enough memory\n";
 
+	}
 	const TCHAR* Title = "Game";
 	if (Init.IsOnlyInstance(Title))
 	{
@@ -24,15 +32,7 @@ void Check()
 		exit(0);
 	}
 
-	if (Init.CheckMemory(2e+6, 2e+6))
-	{
-		std::cout << "You have enough memory\n";
-	}
-	else
-	{
-		std::cout << "You don't have enough memory\n";
-
-	}
+	
 }
 
 
