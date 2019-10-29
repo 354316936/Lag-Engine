@@ -3,6 +3,25 @@
 #include "Lag_Engine/Lag_Engine/Initialization.h"
 
 Initialization Init;
+
+int DisplayResourceNAMessageBox()
+{
+	int msgboxID = MessageBox(
+		NULL,
+		"You can't open two windows?",
+		" ",
+		MB_OK
+	);
+
+	switch (msgboxID)
+	{
+	case IDOK:
+		exit(0);
+		break;
+	}
+
+	return msgboxID;
+}
 void Check()
 {
 
@@ -25,18 +44,6 @@ void Check()
 	{
 		std::cout << "No enought space to install the game\n";
 	}
-
-<<<<<<< Updated upstream
-	const TCHAR* Title = "Game";
-	if (Init.IsOnlyInstance(Title))
-	{
-		std::cout << "Game SUCCESS \n";
-	}
-	else if (!Init.IsOnlyInstance(Title)) {
-		std::cout << "Game Fails \n";
-
-	}
-
 	if (Init.CheckMemory(2e+6, 2e+6))
 	{
 		std::cout << "You have enough memory\n";
@@ -45,10 +52,7 @@ void Check()
 	{
 		std::cout << "You don't have enough memory\n";
 
-=======
->>>>>>> Stashed changes
 	}
-}
 
 
 int main()
