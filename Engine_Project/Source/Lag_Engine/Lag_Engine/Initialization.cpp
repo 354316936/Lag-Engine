@@ -10,6 +10,9 @@ DWORD Initialization::ReadCPUSpeed()
 	DWORD BufSize = sizeof(DWORD);
 	DWORD dwMHz = 0;
 	DWORD type = REG_DWORD;
+	DWORD dwType = REG_SZ;
+	char value[256];
+	DWORD dwCount = sizeof(value);
 	HKEY hKey;
 	// open the key where the proc speed is hidden:
 	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
@@ -23,6 +26,10 @@ DWORD Initialization::ReadCPUSpeed()
 		std::cout << "MHz: " << dwMHz << "\n" << std::endl;
 		std::cout << "type: " << type << "\n" << std::endl;
 		std::cout << "BufSize: " << BufSize << "\n" << std::endl;
+		std::cout << "Name: " << BufSize << "\n" << std::endl;
+		(RegQueryValueEx(hKey, "ProcessorNameString", NULL, &type, (LPBYTE)&value, &dwCount) != ERROR_SUCCESS);
+		std::cout << "Name: " << value << "\n" << std::endl;
+		
 	}
 	return dwMHz;
 	return BufSize;
