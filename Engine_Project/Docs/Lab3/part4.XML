@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Actor>
+    <Transform>
+        <Position>X:1.385889 Y:10.21463 Z:-2.88255</Position>
+        <Rotation>X:3.461321 Y:355.6992 Z:204.3322</Rotation>
+        <Scale>X:7.2182 Y:7.2182 Z:5</Scale>
+    </Transform>
+    <Cube>
+        Mesh Cube
+    </Cube>
+    <Box_Collider>
+        <Is_Trigger>¿Ú</Is_Trigger>
+        <Material>None (Physic Material)</Material>
+        <Center>X:0 Y:0 Z:0</Center>
+        <Size>X:1 Y:1 Z:1</Size>
+    </Box_Collider>
+    <Mesh_Renderer>
+        <Cast_Shadows> ¡Ì</Cast_Shadows>
+        <Receice_Shadows> ¡Ì </Receice_Shadows>
+        <Materials>
+            <Size>1</Size>
+            <Element_0>White</Element_0>
+        </Materials>
+        <Use_Light_Probes>¿Ú</Use_Light_Probes>
+    </Mesh_Renderer>
+    <Rigidbody>
+        <Mass>7.2182</Mass>
+        <Drag>0</Drage>
+        <Angular_Drag>0.05</Angular_Drag>
+        <Use_Gravity>¡Ì</Use_Gravity>
+        <Is_Kinematic>¿Ú</Is_Kinematic>
+        <Interpolate>None</Interpolate>
+        <COllision_Detection>Continues</COllision_Detection>
+  <Constraints></Constraints>
+ </Rigidbody>
+<body>Don't forget me this weekend!</body>
+</Actor>

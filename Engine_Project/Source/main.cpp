@@ -1,9 +1,21 @@
+
 #include <iostream>
 #include "Lag_Engine/Lag_Engine/Initialization.h"
 
 Initialization Init;
 void Check()
 {
+
+	const TCHAR* Title = "Game";
+	if (Init.IsOnlyInstance(Title))
+	{
+		std::cout << "Game SUCCESS \n";
+	}
+	else if (!Init.IsOnlyInstance(Title)) {
+		std::cout << "Game Fails \n";
+		DisplayResourceNAMessageBox();
+	}
+
 	Init.ReadCPUSpeed();
 	if (Init.CheckStorage(307200))//can pass the function to if() directly
 	{
@@ -14,6 +26,7 @@ void Check()
 		std::cout << "No enought space to install the game\n";
 	}
 
+<<<<<<< Updated upstream
 	const TCHAR* Title = "Game";
 	if (Init.IsOnlyInstance(Title))
 	{
@@ -32,6 +45,8 @@ void Check()
 	{
 		std::cout << "You don't have enough memory\n";
 
+=======
+>>>>>>> Stashed changes
 	}
 }
 
