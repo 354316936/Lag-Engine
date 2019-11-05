@@ -16,6 +16,9 @@
     <Filter Include="Actor">
       <UniqueIdentifier>{c675b695-6ff5-4a17-8883-07026885bc1a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{ffc93ec8-4e55-4988-9793-2d515ad58c06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp">
@@ -27,6 +30,33 @@
     <ClCompile Include="..\..\Actors\SpecialAbilityComponent.cpp">
       <Filter>Actor</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Components\AnimationComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\AudioComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\CollisionsComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\FrontEnd.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\NetworkingComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\PhysicsComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\RendererComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Components\VisualEffects.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="_Interface.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Initialization.h">
@@ -37,6 +67,33 @@
     </ClInclude>
     <ClInclude Include="..\..\Actors\SpecialAbilityComponent.h">
       <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\AnimationComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\AudioComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\CollisionsComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\FrontEnd.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\NetworkingComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\PhysicsComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\RendererComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Components\VisualEffects.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="_Interface.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

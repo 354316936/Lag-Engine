@@ -17,12 +17,10 @@ public:
 		typedef unsigned long DWORD, *PDWORD, *LPDWORD;
 		typedef ULONGLONG DWORDLONG, *PDWORDLONG;
 
-
-
-
 		 bool CheckStorage(const DWORDLONG diskSpaceNeeded);
 		 DWORD ReadCPUSpeed();
 		 bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded);
 		 bool IsOnlyInstance(LPCTSTR gameTitle);
 
+		 void Check();
 };

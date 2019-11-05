@@ -20,13 +20,31 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Actors\SpecialAbilityComponent.cpp" />
+    <ClCompile Include="..\..\Components\AnimationComponent.cpp" />
+    <ClCompile Include="..\..\Components\AudioComponent.cpp" />
+    <ClCompile Include="..\..\Components\CollisionsComponent.cpp" />
+    <ClCompile Include="..\..\Components\FrontEnd.cpp" />
+    <ClCompile Include="..\..\Components\NetworkingComponent.cpp" />
+    <ClCompile Include="..\..\Components\PhysicsComponent.cpp" />
+    <ClCompile Include="..\..\Components\RendererComponent.cpp" />
+    <ClCompile Include="..\..\Components\VisualEffects.cpp" />
     <ClCompile Include="..\..\main.cpp" />
     <ClCompile Include="Initialization.cpp" />
+    <ClCompile Include="_Interface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Actors\AbilitiesInterface.h" />
     <ClInclude Include="..\..\Actors\SpecialAbilityComponent.h" />
+    <ClInclude Include="..\..\Components\AnimationComponent.h" />
+    <ClInclude Include="..\..\Components\AudioComponent.h" />
+    <ClInclude Include="..\..\Components\CollisionsComponent.h" />
+    <ClInclude Include="..\..\Components\FrontEnd.h" />
+    <ClInclude Include="..\..\Components\NetworkingComponent.h" />
+    <ClInclude Include="..\..\Components\PhysicsComponent.h" />
+    <ClInclude Include="..\..\Components\RendererComponent.h" />
+    <ClInclude Include="..\..\Components\VisualEffects.h" />
     <ClInclude Include="Initialization.h" />
+    <ClInclude Include="_Interface.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -39,7 +57,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>

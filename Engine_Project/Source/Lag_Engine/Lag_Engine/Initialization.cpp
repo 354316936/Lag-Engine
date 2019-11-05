@@ -56,7 +56,7 @@ bool Initialization::CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDL
 	// Check for enough free memory.
 	if (status.ullAvailVirtual < virtualRAMNeeded)
 	{
-		// you donít have enough virtual memory available. 
+		// you don't have enough virtual memory available. 
 		// Tell the player to shut down the copy of Visual Studio running in the
 		// background, or whatever seems to be sucking the memory dry.
 		std::cout << "CheckMemory Failure: Not enough virtual memory." << std::endl;
@@ -125,6 +125,55 @@ bool Initialization::IsOnlyInstance(LPCTSTR gameTitle)
 
 	return true;
 
+}
+int DisplayResourceNAMessageBox()
+{
+	int msgboxID = MessageBox(
+		NULL,
+		"You can't open two windows?",
+		" ",
+		MB_OK
+	);
+
+	switch (msgboxID)
+	{
+	case IDOK:
+		exit(0);
+		break;
+	}
+
+	return msgboxID;
+}
+void Initialization::Check()
+{
+	const TCHAR* Title = "Game";
+	if (IsOnlyInstance(Title))
+	{
+		std::cout << "Game SUCCESS \n";
+	}
+	else if (!IsOnlyInstance(Title)) {
+		std::cout << "Game Fails \n";
+		DisplayResourceNAMessageBox();
+	}
+
+	ReadCPUSpeed();
+	if (CheckStorage(307200))//can pass the function to if() directly
+	{
+		std::cout << "You have 300 MB available storage\n";
+	}
+	else
+	{
+		std::cout << "No enought space to install the game\n";
+	}
+	if (CheckMemory(2e+6, 2e+6))
+	{
+		std::cout << "You have enough memory\n";
+	}
+	else
+	{
+		std::cout << "You don't have enough memory\n";
+
+	}
 }
 
 Initialization::Initialization()
