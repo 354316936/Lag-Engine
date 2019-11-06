@@ -6,11 +6,13 @@
 #include <stdlib.h>  
 #include <string.h>  
 #include <tchar.h>  
+#include <stdio.h>
+#include <iostream>
 
-class _Interface
+class _Interface 
 {
 public:
- 
+
 	int CALLBACK WinMain(
 		_In_ HINSTANCE hInstance,
 		_In_opt_ HINSTANCE hPrevInstance,
@@ -18,5 +20,7 @@ public:
 		_In_ int       nCmdShow
 	);
 	void onCreateWindows();
+
 };
+
 
