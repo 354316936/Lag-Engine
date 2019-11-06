@@ -80,7 +80,7 @@ int _Interface::WinMain(
 	}
 	HWND hWnd = CreateWindowEx(0,
 		"Window Class",
-		"Windows application",
+		"Maybe its a game engine",
 		WS_OVERLAPPEDWINDOW,
 		200,
 		200,
