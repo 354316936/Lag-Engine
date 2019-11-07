@@ -13,6 +13,23 @@ DWORD Initialization::ReadCPUSpeed()
 	DWORD dwType = REG_SZ;
 	char value[256];
 	DWORD dwCount = sizeof(value);
+	HKEY hKey ;
+	// open the key where the proc speed is hidden:
+	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
+		"HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0",
+		0, KEY_READ, &hKey);
+
+	if (lError == ERROR_SUCCESS)
+	{
+		RegQueryValueEx(hKey, "ProcessorNameString", NULL, &type, (LPBYTE)&value, &dwCount);
+	}
+	return dwCount;
+}
+DWORD Initialization::MHz()
+{
+	DWORD BufSize = sizeof(DWORD);
+	DWORD dwMHz = 0;
+	DWORD type = REG_DWORD;
 	HKEY hKey;
 	// open the key where the proc speed is hidden:
 	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
@@ -23,18 +40,67 @@ DWORD Initialization::ReadCPUSpeed()
 	{
 		// query the key:
 		RegQueryValueEx(hKey, ("~MHZ"), NULL, &type, (LPBYTE)& dwMHz, &BufSize);
-		std::cout << "MHz: " << dwMHz << "\n" << std::endl;
-		std::cout << "type: " << type << "\n" << std::endl;
-		std::cout << "BufSize: " << BufSize << "\n" << std::endl;
-		std::cout << "Name: " << BufSize << "\n" << std::endl;
-		(RegQueryValueEx(hKey, "ProcessorNameString", NULL, &type, (LPBYTE)&value, &dwCount) != ERROR_SUCCESS);
-		std::cout << "Name: " << value << "\n" << std::endl;
-		
 	}
 	return dwMHz;
-	return BufSize;
-	return	type;
 }
+DWORD Initialization::Type()
+{
+	DWORD BufSize = sizeof(DWORD);
+	DWORD dwMHz = 0;
+	DWORD type = REG_DWORD;
+	HKEY hKey;
+	// open the key where the proc speed is hidden:
+	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
+		"HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0",
+		0, KEY_READ, &hKey);
+
+	if (lError == ERROR_SUCCESS)
+	{
+		// query the key:
+		RegQueryValueEx(hKey, ("~MHZ"), NULL, &type, (LPBYTE)& dwMHz, &BufSize);
+	}
+	return type;
+}
+
+DWORD Initialization::BuffSize()
+{
+	DWORD BufSize = sizeof(DWORD);
+	DWORD dwMHz = 0;
+	DWORD type = REG_DWORD;
+	HKEY hKey;
+	// open the key where the proc speed is hidden:
+	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
+		"HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0",
+		0, KEY_READ, &hKey);
+
+	if (lError == ERROR_SUCCESS)
+	{
+		// query the key:
+		RegQueryValueEx(hKey, ("~MHZ"), NULL, &type, (LPBYTE)& dwMHz, &BufSize);
+	}
+	return BufSize;
+}
+
+char*  Initialization::Name()
+{
+	char value [256];
+	DWORD dwCount = sizeof(value);
+	HKEY hKey;
+	// open the key where the proc speed is hidden:
+	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
+		"HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0",
+		0, KEY_READ, &hKey);
+
+	if (lError == ERROR_SUCCESS)
+	{
+		// query the key:
+		RegQueryValueEx(hKey, "ProcessorNameString", NULL, NULL, (LPBYTE)&value, &dwCount);
+
+		
+	}
+	return value;
+}
+
 // CheckMemory
 //
 bool Initialization::CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded)
@@ -96,6 +162,7 @@ bool Initialization::CheckStorage(const DWORDLONG diskSpaceNeeded)
 		std::cout << "CheckStorage Failure: Not enough physical storage." << std::endl;
 		return false;
 	}
+	
 	return true;
 }
 
