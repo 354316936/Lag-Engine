@@ -1,6 +1,8 @@
 #include "_Interface.h"
 #include "Initialization.h"
 #include<stdlib.h>
+#include <windowsx.h>
+#include <windows.h>
 #include <strsafe.h>
 
 #define IDC_MAIN_EDIT   101
@@ -11,109 +13,12 @@
 HINSTANCE hIns;
 LPSTR  lp;
 
+Initialization* Init;
+
 using namespace std;
-LRESULT CALLBACK WinProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
-
-	static HWND hEdit;
-	HFONT hFont = CreateFont(0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, TEXT("Courier New"));
-	switch (message) {
-	case WM_DESTROY:
-		PostQuitMessage(0);
-		return 0;
-		break;
-	case WM_CREATE:
-		hEdit = CreateWindowEx(WS_EX_CLIENTEDGE,
-			"EDIT",
-			"",
-			WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VISIBLE | WS_VSCROLL | ES_MULTILINE,
-			0,
-			0,
-			WIDTH,
-			HEIGHT,
-			hWnd,
-			(HMENU)IDC_MAIN_EDIT,
-			GetModuleHandle(NULL),
-			NULL);	
-		SendMessage(hEdit, WM_SETFONT, (WPARAM)hFont, 0);
-		SendMessage(hEdit,
-			WM_SETTEXT,
-			0,
-			(LPARAM)"Insert text here...");
-		break;
-	case WM_SIZE:
-		MoveWindow(hEdit, 0, 0, LOWORD(lParam), HIWORD(lParam), TRUE);
-		break;
-	}
-	return DefWindowProc(hWnd, message, wParam, lParam);
-
-	return 0;
-}
-
-
-
-int _Interface::WinMain(
-	_In_ HINSTANCE hInstance,
-	_In_opt_ HINSTANCE hPrevInstance,
-	_In_ LPSTR     lpCmdLine,
-	_In_ int       nCmdShow)
-{
-	WNDCLASSEX wClass;
-	ZeroMemory(&wClass, sizeof(WNDCLASSEX));
-	wClass.cbSize = sizeof(WNDCLASSEX);
-	wClass.hbrBackground = (HBRUSH)COLOR_WINDOW;
-	wClass.hCursor = LoadCursor(NULL, IDC_ARROW);
-	wClass.hIcon = NULL;
-	wClass.hIconSm = NULL;
-	wClass.hInstance = hInstance;
-	wClass.lpfnWndProc = (WNDPROC)WinProc;
-	wClass.lpszClassName = "Window Class";
-	wClass.lpszMenuName = NULL;
-	wClass.style = CS_HREDRAW | CS_VREDRAW;
-
-	if (!RegisterClassEx(&wClass)) {
-		int nResult = GetLastError();
-		MessageBox(NULL,
-			"Window class creation failed",
-			"Window Class Failed",
-			MB_ICONERROR);
-	}
-	HWND hWnd = CreateWindowEx(0,
-		"Window Class",
-		"Windows application",
-		WS_OVERLAPPEDWINDOW,
-		200,
-		200,
-		640,
-		480,
-		NULL,
-		NULL,
-		hInstance,
-		NULL);
-
-	if (!hWnd) {
-		int nResult = GetLastError();
-
-		MessageBox(NULL,
-			"Window creation failed",
-			"Window Creation Failed",
-			MB_ICONERROR);
-	}
-
-	ShowWindow(hWnd, nCmdShow);
-
-	MSG msg;
-	ZeroMemory(&msg, sizeof(MSG));
-
-	while (GetMessage(&msg, NULL, 0, 0)) {
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
-	}
-	return 0;
-}
-
 LONG APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+	TCHAR greeting[] = _T(" ");
 	HDC hdc;                   // handle to device context 
 	TEXTMETRIC tm;             // structure for text metrics 
 	static DWORD dwCharX;      // average width of characters 
@@ -141,8 +46,24 @@ LONG APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lParam
 	COLORREF crPrevBk;         // previous background color
 	size_t * pcch = 0;
 
-	HRESULT hResult;
+	int wnd_x = 0;
+	int wnd_y = 0;
 
+	HWND g_hMainWnd = NULL;
+	bool g_MovingMainWnd = false;
+	POINT g_OrigCursorPos;
+	g_OrigCursorPos.x = GET_X_LPARAM(lParam);
+	g_OrigCursorPos.y = GET_Y_LPARAM(lParam);
+	POINT g_OrigWndPos;
+	g_OrigWndPos.x = GET_X_LPARAM(lParam);
+	g_OrigWndPos.y = GET_Y_LPARAM(lParam);
+
+	HRESULT hResult;
+	TCHAR MHz[] = _T("MHz: ");
+	TCHAR Type[] = _T("Type: ");
+	TCHAR BuffSize[] = _T("Buff Size: ");
+
+	CString x;
 	switch (uMsg)
 	{
 	case WM_CREATE:
@@ -152,7 +73,7 @@ LONG APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lParam
 		hdc = GetDC(hwndMain);
 		GetTextMetrics(hdc, &tm);
 		ReleaseDC(hwndMain, hdc);
-
+		
 		// Save the average character width and height. 
 
 		dwCharX = tm.tmAveCharWidth;
@@ -418,26 +339,105 @@ LONG APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lParam
 		}
 		SetCaretPos(nCaretPosX, nCaretPosY * dwCharY);
 		break;
+	case WM_LBUTTONDOWN:
+		// here you can add extra check and decide whether to start
+		// the window move or not
+		if (GetCursorPos(&g_OrigCursorPos))
+		{
+			RECT rt;
+			GetWindowRect(hwndMain, &rt);
+			g_OrigWndPos.x = rt.left;
+			g_OrigWndPos.y = rt.top;
+			g_MovingMainWnd = true;
+			SetCapture(hwndMain);
+			SetCursor(LoadCursor(NULL, IDC_SIZEALL));
+		}
+
+		return 0;
+
+		// THE RIGHT WAY OF DOING IT:
+		//*  <- Remove a slash to comment out the good version!
+	case WM_LBUTTONUP:
+		ReleaseCapture();
+		return 0;
+	case WM_CAPTURECHANGED:
+		g_MovingMainWnd = (HWND)lParam == hwndMain;
+		return 0;
+		/**/
+
+		// THE WRONG WAY OF DOING IT:
+		/*  <- Prefix this with a slash to uncomment the bad version!
+		case WM_LBUTTONUP:
+			g_MovingMainWnd = false;
+			ReleaseCapture();
+			return 0;
+		// buggy programs usually do not handle WM_CAPTURECHANGED at all
+		case WM_CAPTURECHANGED:
+			break;
+		/**/
+
+	case WM_MOUSEMOVE:
+		
+		if (g_MovingMainWnd)
+		{
+			POINT pt;
+			if (GetCursorPos(&pt))
+			{
+				    wnd_x = g_OrigWndPos.x +
+					(pt.x - g_OrigCursorPos.x);
+				   wnd_y = g_OrigWndPos.y +
+					(pt.y - g_OrigCursorPos.y);
+				SetWindowPos(hwndMain, NULL, wnd_x,
+					wnd_y, 0, 0, SWP_NOACTIVATE |
+					SWP_NOOWNERZORDER | SWP_NOZORDER |
+					SWP_NOSIZE);
+				
+			}
+			
+		}
+
+		std::cout << g_OrigWndPos.x << ", " << g_OrigWndPos.y;
+		return 0;
 
 	case WM_PAINT:
-		if (cch == 0)       // nothing in input buffer 
-			break;
-
 		hdc = BeginPaint(hwndMain, &ps);
-		HideCaret(hwndMain);
 
-		// Set the clipping rectangle, and then draw the text 
-		// into it. 
+		// Here your application is laid out.  
+		// For this introduction, we just print out "Hello, World!"  
+		// in the top left corner.  
+		x.Format("%d", Init->MHz());
+		TextOut(hdc,
+			0, 0,
+			MHz + x, _tcslen(MHz + x));
+		// End application-specific layout section.  
+		x.Format("%d", Init->Type());
+		TextOut(hdc,
+			0, 20,
+			Type + x, _tcslen(Type + x));
+		// End application-specific layout section.  
 
-		SetRect(&rc, 0, 0, dwLineLen, dwClientY);
-		DrawText(hdc, pchInputBuf, -1, &rc, DT_LEFT);
+		x.Format("%d", Init->BuffSize());
+		TextOut(hdc,
+			0, 40,
+			BuffSize + x, _tcslen(BuffSize + x));
 
-		ShowCaret(hwndMain);
+		TextOut(hdc,
+			0, 60,
+			Init->Name(), _tcslen(Init->Name()));
+
+		
+		TextOut(hdc,
+			0, 80,
+			"Mouse X: " + g_OrigCursorPos.x, _tcslen("Mouse X: " + g_OrigCursorPos.x));
+
+		TextOut(hdc,
+			0, 100,
+			"Mouse Y: " + g_OrigCursorPos.y, _tcslen("Mouse Y: " + g_OrigCursorPos.y));
+
+		// End application-specific layout section.  
 		EndPaint(hwndMain, &ps);
+		
 		break;
-
-		// Process other messages. 
-
 	case WM_DESTROY:
 		PostQuitMessage(0);
 
@@ -452,6 +452,121 @@ LONG APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lParam
 	}
 	return NULL;
 }
+LRESULT CALLBACK WinProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	
+	PAINTSTRUCT ps;
+	HDC hdc;
+	TCHAR MHz[] = _T("MHz: ");
+	TCHAR Type[] = _T("Type: ");
+	TCHAR BuffSize[] = _T("Buff Size: ");
+	CString x;
+
+	switch (message)
+	{
+	case WM_PAINT:
+		hdc = BeginPaint(hWnd, &ps);
+
+		// Here your application is laid out.  
+		// For this introduction, we just print out "Hello, World!"  
+		// in the top left corner.  
+		x.Format("%d", Init->MHz());
+		TextOut(hdc,
+			0, 0,
+			MHz + x, _tcslen(MHz + x));
+		// End application-specific layout section.  
+		x.Format("%d", Init->Type());
+		TextOut(hdc,
+			0, 20,
+			Type + x, _tcslen(Type + x));
+		// End application-specific layout section.  
+
+		x.Format("%d", Init->BuffSize());
+		TextOut(hdc,
+			0, 40,
+			BuffSize + x, _tcslen(BuffSize + x));
+
+		TextOut(hdc,
+			0, 60,
+			Init->Name(), _tcslen(Init->Name()));
+		// End application-specific layout section.  
+		EndPaint(hWnd, &ps);
+		break;
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	default:
+		return DefWindowProc(hWnd, message, wParam, lParam);
+		break;
+	}
+
+	return 0;
+}
+
+
+
+int _Interface::WinMain(
+	_In_ HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_ LPSTR     lpCmdLine,
+	_In_ int       nCmdShow)
+{
+	WNDCLASSEX wClass;
+	ZeroMemory(&wClass, sizeof(WNDCLASSEX));
+	wClass.cbSize = sizeof(WNDCLASSEX);
+	wClass.hbrBackground = (HBRUSH)COLOR_WINDOW;
+	wClass.hCursor = LoadCursor(NULL, IDC_ARROW);
+	wClass.hIcon = NULL;
+	wClass.hIconSm = NULL;
+	wClass.hInstance = hInstance;
+	wClass.lpfnWndProc = (WNDPROC)MainWndProc;
+	wClass.lpszClassName = "Window Class";
+	wClass.lpszMenuName = NULL;
+	wClass.style = CS_HREDRAW | CS_VREDRAW;
+
+	if (!RegisterClassEx(&wClass)) {
+		int nResult = GetLastError();
+		MessageBox(NULL,
+			"Window class creation failed",
+			"Window Class Failed",
+			MB_ICONERROR);
+	}
+	HWND hWnd = CreateWindowEx(0,
+		"Window Class",
+		"Maybe its a game engine",
+		WS_OVERLAPPEDWINDOW,
+		200,
+		200,
+		640,
+		480,
+		NULL,
+		NULL,
+		hInstance,
+		NULL);
+
+	if (!hWnd) {
+		int nResult = GetLastError();
+
+		MessageBox(NULL,
+			"Window creation failed",
+			"Window Creation Failed",
+			MB_ICONERROR);
+	}
+
+	ShowWindow(hWnd, nCmdShow);
+	UpdateWindow(hWnd);
+	MSG msg;
+	ZeroMemory(&msg, sizeof(MSG));
+
+	while (GetMessage(&msg, NULL, 0, 0)) {
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+		RedrawWindow(hWnd, 0, 0, RDW_INVALIDATE | RDW_UPDATENOW);
+	}
+	return 0;
+}
+
+
 void _Interface::onCreateWindows()
 {
 	

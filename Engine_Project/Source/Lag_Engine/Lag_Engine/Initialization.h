@@ -19,6 +19,11 @@ public:
 
 		 bool CheckStorage(const DWORDLONG diskSpaceNeeded);
 		 DWORD ReadCPUSpeed();
+		 DWORD MHz();
+		 DWORD Type();
+		 DWORD BuffSize();
+		 
+		 char*  Name();
 		 bool CheckMemory(const DWORDLONG physicalRAMNeeded, const DWORDLONG virtualRAMNeeded);
 		 bool IsOnlyInstance(LPCTSTR gameTitle);
 

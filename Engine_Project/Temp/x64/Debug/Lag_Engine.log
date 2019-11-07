@@ -1,8 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  _Interface.cpp
-c:\users\lucianz\desktop\lag-engine\engine_project\source\lag_engine\lag_engine\_interface.cpp(7): warning C4005: 'WIDTH': macro redefinition
-  c:\users\lucianz\desktop\lag-engine\engine_project\source\lag_engine\lag_engine\initialization.h(10): note: see previous definition of 'WIDTH'
-c:\users\lucianz\desktop\lag-engine\engine_project\source\lag_engine\lag_engine\_interface.cpp(410): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-c:\users\lucianz\desktop\lag-engine\engine_project\source\lag_engine\lag_engine\_interface.cpp(451): warning C4244: 'return': conversion from 'LRESULT' to 'LONG', possible loss of data
+  Initialization.cpp
+c:\users\lucianz\desktop\lag-engine\engine_project\source\lag_engine\lag_engine\initialization.cpp(235): warning C4244: 'argument': conversion from 'double' to 'const Initialization::DWORDLONG', possible loss of data
+c:\users\lucianz\desktop\lag-engine\engine_project\source\lag_engine\lag_engine\initialization.cpp(101): warning C4172: returning address of local variable or temporary: value
   Lag_Engine.vcxproj -> C:\Users\LucianZ\Desktop\Lag-Engine\Engine_Project\Source\Lag_Engine\../../Game/x64/Debug\Lag_Engine-x64-Debug.exe
