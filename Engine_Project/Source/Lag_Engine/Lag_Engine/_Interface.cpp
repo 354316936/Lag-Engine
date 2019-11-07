@@ -66,7 +66,7 @@ int _Interface::WinMain(
 	wClass.hIcon = NULL;
 	wClass.hIconSm = NULL;
 	wClass.hInstance = hInstance;
-	wClass.lpfnWndProc = (WNDPROC)WinProc;
+	wClass.lpfnWndProc = (WNDPROC)MainWndProc//WinProc;
 	wClass.lpszClassName = "Window Class";
 	wClass.lpszMenuName = NULL;
 	wClass.style = CS_HREDRAW | CS_VREDRAW;
