@@ -29,7 +29,12 @@
     <ClCompile Include="..\..\Components\RendererComponent.cpp" />
     <ClCompile Include="..\..\Components\VisualEffects.cpp" />
     <ClCompile Include="..\..\main.cpp" />
+    <ClCompile Include="Dispatcher.cpp" />
+    <ClCompile Include="MouseEvent.cpp" />
     <ClCompile Include="Initialization.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="KeyboardEvent.cpp" />
+    <ClCompile Include="RenderSystem.cpp" />
     <ClCompile Include="_Interface.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +48,13 @@
     <ClInclude Include="..\..\Components\PhysicsComponent.h" />
     <ClInclude Include="..\..\Components\RendererComponent.h" />
     <ClInclude Include="..\..\Components\VisualEffects.h" />
+    <ClInclude Include="Dispatcher.h" />
+    <ClInclude Include="MouseEvent.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="Initialization.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="KeyboardEvent.h" />
+    <ClInclude Include="RenderSystem.h" />
     <ClInclude Include="_Interface.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
