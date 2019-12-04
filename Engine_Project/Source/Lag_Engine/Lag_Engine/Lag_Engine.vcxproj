@@ -30,7 +30,9 @@
     <ClCompile Include="..\..\Components\VisualEffects.cpp" />
     <ClCompile Include="..\..\main.cpp" />
     <ClCompile Include="Initialization.cpp" />
-    <ClCompile Include="_Interface.cpp" />
+    <ClCompile Include="_Interface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Actors\AbilitiesInterface.h" />
