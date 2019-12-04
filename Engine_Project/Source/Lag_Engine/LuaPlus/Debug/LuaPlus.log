@@ -1,0 +1,123 @@
+﻿  LuaPlus.cpp
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luaobject.inl(1390): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutfile.h(81): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutfile.h(83): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutfile.h(103): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1469): note: see declaration of 'vsprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutstring.h(48): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1469): note: see declaration of 'vsprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutstring.h(63): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luacall.inl(113): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  LuaState_DumpObject.cpp
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luaobject.inl(1390): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutfile.h(81): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutfile.h(83): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutfile.h(103): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1469): note: see declaration of 'vsprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutstring.h(48): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1469): note: see declaration of 'vsprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastateoutstring.h(63): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luacall.inl(113): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(311): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(313): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(352): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(380): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(390): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(400): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(409): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(426): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\luastate_dumpobject.cpp(534): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  HostConfig.cpp
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\hostconfig.cpp(54): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1961): note: see declaration of '_snprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\hostconfig.cpp(70): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1961): note: see declaration of '_snprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\hostconfig.cpp(77): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: see declaration of 'strcat'
+  LuaDebugger.cpp
+  LuaDebuggerComms.cpp
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luadebuggercomms.cpp(1087): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+  LuaHostWindows.cpp
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luahostwindows.cpp(70): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luahostwindows.cpp(71): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luahostwindows.cpp(431): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luahostwindows.cpp(443): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luahostwindows.cpp(445): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  LuaTilde.cpp
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luatilde.cpp(16): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luatilde.cpp(22): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luatilde.cpp(30): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luatilde.cpp(36): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luatilde.cpp(42): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\users\family\documents\lag-engine\engine_project\source\lag_engine\lag_engine\luaplus\tilde\luatilde.cpp(45): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+  Generating Code...
+  LuaPlusAddons.c
+  lapi.c
+  lauxlib.c
+  lbaselib.c
+  lbitlib.c
+  lcode.c
+  lcorolib.c
+  lctype.c
+  ldblib.c
+  ldebug.c
+  ldo.c
+  ldump.c
+  lfunc.c
+  lgc.c
+  linit.c
+  liolib.c
+  llex.c
+  lmathlib.c
+  lmem.c
+  loadlib.c
+  Generating Code...
+  Compiling...
+  lobject.c
+  lopcodes.c
+  loslib.c
+  lparser.c
+  lstate.c
+  lstring.c
+  lstrlib.c
+  ltable.c
+  ltablib.c
+  ltm.c
+  lundump.c
+  lutf8lib.c
+  lvm.c
+  lzio.c
+  Generating Code...
+LuaPlus.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  LuaPlus.vcxproj -> C:\Users\Family\Documents\Lag-Engine\Engine_Project\Source\Lag_Engine\Debug\LuaPlus.lib

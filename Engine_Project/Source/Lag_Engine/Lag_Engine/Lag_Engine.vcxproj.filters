@@ -63,12 +63,6 @@
     <ClCompile Include="_Interface.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="KeyboardEvent.cpp">
       <Filter>Events</Filter>
     </ClCompile>
@@ -77,6 +71,12 @@
     </ClCompile>
     <ClCompile Include="MouseEvent.cpp">
       <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,13 +125,13 @@
     <ClInclude Include="KeyboardEvent.h">
       <Filter>Events</Filter>
     </ClInclude>
-    <ClInclude Include="Event.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Dispatcher.h">
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="MouseEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
       <Filter>Events</Filter>
     </ClInclude>
   </ItemGroup>

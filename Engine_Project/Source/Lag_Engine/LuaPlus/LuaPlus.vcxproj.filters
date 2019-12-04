@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LuaPlusH">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="LuaSrc">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="LuaTilde">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaAutoBlock.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaCall.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaFunction.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaHelper.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaHelper_Object.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaHelper_StackObject.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaObject.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaPlus.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaPlusCD.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaPlusConfig.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaPlusInternal.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaStackObject.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaStackTableIterator.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaState.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaStateCD.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaStateOutFile.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaStateOutString.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\LuaTableIterator.h">
+      <Filter>LuaPlusH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lapi.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lauxlib.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lcode.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lctype.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\ldebug.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\ldo.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lfunc.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lgc.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\llex.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\llimits.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lmem.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lobject.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lopcodes.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lparser.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lprefix.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lstate.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lstring.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\ltable.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\ltm.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lua.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lua.hpp">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\luaconf.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lualib.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lundump.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lvm.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\src\lzio.h">
+      <Filter>LuaSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\HostConfig.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\LuaDebugger.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\LuaDebuggerComms.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\LuaDebuggerHost.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\LuaDebuggerProtocol.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\LuaHostWindows.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\LuaTilde.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\ReceiveMessageBuffer.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lag_Engine\LuaPlus\tilde\SendMessageBuffer.h">
+      <Filter>LuaTilde</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Lag_Engine\LuaPlus\LuaCall.inl">
+      <Filter>LuaPlusH</Filter>
+    </None>
+    <None Include="..\Lag_Engine\LuaPlus\LuaObject.inl">
+      <Filter>LuaPlusH</Filter>
+    </None>
+    <None Include="..\Lag_Engine\LuaPlus\LuaPlusSharedLib.jam">
+      <Filter>LuaPlusH</Filter>
+    </None>
+    <None Include="..\Lag_Engine\LuaPlus\LuaPlusStaticLib.jam">
+      <Filter>LuaPlusH</Filter>
+    </None>
+    <None Include="..\Lag_Engine\LuaPlus\LuaStackObject.inl">
+      <Filter>LuaPlusH</Filter>
+    </None>
+    <None Include="..\Lag_Engine\LuaPlus\LuaStackTableIterator.inl">
+      <Filter>LuaPlusH</Filter>
+    </None>
+    <None Include="..\Lag_Engine\LuaPlus\LuaState.inl">
+      <Filter>LuaPlusH</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\LuaPlus.cpp">
+      <Filter>LuaPlusH</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\LuaPlusAddons.c">
+      <Filter>LuaPlusH</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\LuaState_DumpObject.cpp">
+      <Filter>LuaPlusH</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lapi.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lauxlib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lbaselib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lbitlib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lcode.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lcorolib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lctype.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ldblib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ldebug.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ldo.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ldump.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lfunc.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lgc.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\linit.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\liolib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\llex.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lmathlib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lmem.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\loadlib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lobject.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lopcodes.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\loslib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lparser.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lstate.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lstring.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lstrlib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ltable.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ltablib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\ltm.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lundump.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lutf8lib.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lvm.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\src\lzio.c">
+      <Filter>LuaSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\tilde\HostConfig.cpp">
+      <Filter>LuaTilde</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\tilde\LuaDebugger.cpp">
+      <Filter>LuaTilde</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\tilde\LuaDebuggerComms.cpp">
+      <Filter>LuaTilde</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\tilde\LuaHostWindows.cpp">
+      <Filter>LuaTilde</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lag_Engine\LuaPlus\tilde\LuaTilde.cpp">
+      <Filter>LuaTilde</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
