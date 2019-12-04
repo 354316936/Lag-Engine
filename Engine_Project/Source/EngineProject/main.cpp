@@ -12,6 +12,36 @@ using namespace std;
 using namespace LuaPlus;
 
 
+
+
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLine, INT nCmdShow)
+{
+	LuaState* pLuaState = LuaState::Create();
+
+	GameEngine* engine = GameEngine::GetInstance();
+	if (engine->InitInstance(hInstance, previousInstance, cmdLine, nCmdShow, "Our Game"))
+	{
+		Handler::GetInstance()->Subscribe(EventType::MouseEvent, &mouseClick);
+		Handler::GetInstance()->Subscribe(EventType::KeyboardEvent, &keyboardPress);
+		pLuaState->DoString("MyTable = { Hi = 5, Hello = 10, Yo = 6 }");
+
+		LuaObject obj = pLuaState->GetGlobals()["MyTable"];
+		for (LuaTableIterator it(obj); it; it.Next())
+		{
+			const char* key = it.GetKey().GetString();
+			int num = it.GetValue().GetInteger();
+			engine->PrintOnWindow(key);
+
+		}
+		
+
+		
+		engine->Run();
+	}
+	LuaState::Destroy(pLuaState);
+	pLuaState = NULL;
+	return 0;
+}
 void mouseClick(const Event& e) {
 	if (e.Handler == EventType::MouseEvent)
 	{
@@ -41,33 +71,4 @@ void keyboardPress(const Event& e)
 			message += myKeyboardEvent.keyInt;
 		GameEngine::GetInstance()->PrintOnWindow(message);
 	}
-}
-
-int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLine, INT nCmdShow)
-{
-	LuaState* pLuaState = LuaState::Create();
-
-	GameEngine* engine = GameEngine::GetInstance();
-	if (engine->InitInstance(hInstance, previousInstance, cmdLine, nCmdShow, "Our Game"))
-	{
-		Handler::GetInstance()->Subscribe(EventType::MouseEvent, &mouseClick);
-		Handler::GetInstance()->Subscribe(EventType::KeyboardEvent, &keyboardPress);
-		pLuaState->DoString("MyTable = { Hi = 5, Hello = 10, Yo = 6 }");
-
-		LuaObject obj = pLuaState->GetGlobals()["MyTable"];
-		for (LuaTableIterator it(obj); it; it.Next())
-		{
-			const char* key = it.GetKey().GetString();
-			int num = it.GetValue().GetInteger();
-			engine->PrintOnWindow(key);
-
-		}
-		
-
-		
-		engine->Run();
-	}
-	LuaState::Destroy(pLuaState);
-	pLuaState = NULL;
-	return 0;
 }
