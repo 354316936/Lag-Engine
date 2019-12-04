@@ -1,0 +1,29 @@
+﻿  Actor.cpp
+  Handler.cpp
+  MainGameCode.cpp
+  AnimationComponent.cpp
+  AudioComponent.cpp
+  CollisionsComponent.cpp
+  FrontEnd.cpp
+  NetworkingComponent.cpp
+  PhysicsComponent.cpp
+  RendererComponent.cpp
+  ScriptComponent.cpp
+  VisualEffects.cpp
+  KeyboardE.cpp
+  MouseE.cpp
+  GameEngine.cpp
+e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(60): warning C4474: 'sprintf_s' : too many arguments passed for format string
+  e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(60): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(76): warning C4474: 'sprintf_s' : too many arguments passed for format string
+  e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(76): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(82): warning C4474: 'sprintf_s' : too many arguments passed for format string
+  e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(82): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  main.cpp
+  InputSystem.cpp
+  RenderingSystem.cpp
+e:\lag-engine\engine_project\source\engineproject\systems\renderingsystem.cpp(25): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+e:\lag-engine\engine_project\source\engineproject\systems\renderingsystem.cpp(30): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+  Generating Code...
+e:\lag-engine\engine_project\source\engineproject\systems\inputsystem.cpp(55): warning C4715: 'InputSystem::WndProc': not all control paths return a value
+  Lag-Engine.vcxproj -> E:\Lag-Engine\Engine_Project\Source\Debug\Lag-Engine.exe
