@@ -1,2 +1,0 @@
-# Elasticity
-Hi there!
