@@ -56,7 +56,7 @@ LRESULT CALLBACK InputSystem::WndProc(HWND hWnd, UINT msg, WPARAM param, LPARAM 
 
 void InputSystem::ChangeMessage(string message) 
 {
-	sprintf_s(WindowText, 2000, message.c_str());
+	sprintf_s(WindowText, 1000, message.c_str());
 }
 
 

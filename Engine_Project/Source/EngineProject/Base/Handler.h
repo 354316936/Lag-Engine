@@ -10,9 +10,9 @@ class Handler
 {
 public:
 	using SlotType = std::function< void(const Event&) >;
-	void Subscribe(const EventType descriptor, SlotType&& slot);
+	void Subscribe(const EventType handler, SlotType&& slot);
 
-	void Subscribe(const EventType descriptor, void(*slot)(const Event& e) );
+	void Subscribe(const EventType handler, void(*slot)(const Event& e) );
 
 	void Post(const Event& event);
 	static Handler* GetInstance();

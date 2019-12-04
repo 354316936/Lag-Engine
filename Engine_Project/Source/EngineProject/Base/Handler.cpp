@@ -11,15 +11,15 @@ Handler* Handler::GetInstance()
 	return instance;
 }
 
-void Handler::Subscribe(const EventType descriptor, SlotType&& slot)
+void Handler::Subscribe(const EventType handler, SlotType&& slot)
 {
-	observers[descriptor].push_back(slot);
+	observers[handler].push_back(slot);
 }
 
-void Handler::Subscribe(const EventType descriptor, void(*slot)(const Event& e))
+void Handler::Subscribe(const EventType handler, void(*slot)(const Event& e))
 {
 
-	observers2[descriptor].push_back(slot);
+	observers2[handler].push_back(slot);
 }
 void Handler::Post(const Event& event)
 {

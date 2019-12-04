@@ -145,7 +145,6 @@ bool GameEngine::InitInstance(HINSTANCE _hInstance, HINSTANCE _previousInstance,
 		Print("Starting system check...");
 		bool result = CheckStorage(DISK_SPACE_NEEDED) && CheckMemory(PHYSICAL_MEMORY_NEEDED, VIRTUAL_MEMORY_NEEDED);
 		if (result) { ReadCPU(); }
-		Print("Finished system check...");
 		return result;
 	}
 	else

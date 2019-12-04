@@ -23,7 +23,10 @@ void mouseClick(const Event& e) {
 		MouseEventS += " ";
 		snprintf(number, sizeof(number), "%d", myMouseEvent.y);
 		MouseEventS += number;
-		MouseEventS = myMouseEvent.leftClick ? "Left " + MouseEventS : "Right " + MouseEventS;
+		if (myMouseEvent.leftClick)
+			MouseEventS = "Left " + MouseEventS;
+		else
+			MouseEventS = "Right " + MouseEventS;
 		GameEngine::GetInstance()->PrintOnWindow(MouseEventS);
 	}
 }
@@ -32,7 +35,6 @@ void keyboardPress(const Event& e)
 {
 	if (e.Handler == EventType::KeyboardEvent)
 	{
-		char buffer[100];
 		const KeyboardE& myKeyboardEvent = static_cast<const KeyboardE&>(e);
 		string message = "Pressed key: ";
 		if (myKeyboardEvent.isChar)
@@ -60,10 +62,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLi
 			const char* key = it.GetKey().GetString();
 			int num = it.GetValue().GetInteger();
 			engine->PrintOnWindow(key);
-
 		}
-		
-
 		
 		engine->Run();
 	}

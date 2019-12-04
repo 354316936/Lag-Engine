@@ -34,7 +34,7 @@ void RenderingSystem::WindowCreate()
 
 		return;
 	}
-	HWND hWnd = CreateWindow(szWindowClass, szTitle.c_str(), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 800, NULL, NULL, hInstance, NULL);
+	HWND hWnd = CreateWindow(szWindowClass, szTitle.c_str(), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 640, 640, NULL, NULL, hInstance, NULL);
 
 	if (!hWnd)
 	{
