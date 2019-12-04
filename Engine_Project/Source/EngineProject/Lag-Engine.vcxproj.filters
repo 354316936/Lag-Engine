@@ -48,30 +48,6 @@
     <ClCompile Include="Base\MainGameCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\AudioComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\CollisionsComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\FrontEnd.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\NetworkingComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\PhysicsComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\RendererComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\VisualEffects.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\AnimationComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
     <ClCompile Include="Systems\InputSystem.cpp">
       <Filter>Systems</Filter>
     </ClCompile>
@@ -86,6 +62,30 @@
     </ClCompile>
     <ClCompile Include="Components\ScriptComponent\ScriptComponent.cpp">
       <Filter>Components\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AnimationComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AudioComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\CollisionsComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\FrontEnd.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\NetworkingComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PhysicsComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\RendererComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\VisualEffects.cpp">
+      <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,30 +104,6 @@
     <ClInclude Include="Base\MainGameCode.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\AnimationComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\AudioComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\CollisionsComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\FrontEnd.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\NetworkingComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\PhysicsComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\RendererComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Run\Downloads\Lag-Engine-Assignment2\Engine_Project\Source\Components\VisualEffects.h">
-      <Filter>Components</Filter>
-    </ClInclude>
     <ClInclude Include="Systems\InputSystem.h">
       <Filter>Systems</Filter>
     </ClInclude>
@@ -142,6 +118,30 @@
     </ClInclude>
     <ClInclude Include="Components\ScriptComponent\ScriptComponent.h">
       <Filter>Components\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AnimationComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AudioComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\CollisionsComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\FrontEnd.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\NetworkingComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PhysicsComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RendererComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\VisualEffects.h">
+      <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
