@@ -6,8 +6,8 @@
 #include "Events/KeyboardE.h"
 #include "LuaPlus.h"
 
-
-
+void mouseClick(const Event& e);
+void keyboardPress(const Event& e);
 using namespace std;
 using namespace LuaPlus;
 
