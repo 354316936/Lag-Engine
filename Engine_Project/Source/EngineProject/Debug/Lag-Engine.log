@@ -1,0 +1,3 @@
+﻿  main.cpp
+e:\lag-engine-master\source\engineproject\main.cpp(35): warning C4101: 'buffer': unreferenced local variable
+  Lag-Engine.vcxproj -> E:\Lag-Engine-master\Source\Debug\Lag-Engine.exe
