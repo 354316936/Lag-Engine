@@ -1,3 +1,4 @@
+#include <SFML/Graphics.hpp>
 #include "windows.h"
 #include "GameEngine.h"
 #include "Base/Handler.h"
@@ -5,13 +6,16 @@
 #include "Events/MouseE.h"
 #include "Events/KeyboardE.h"
 #include "LuaPlus.h"
+#include "Base/Actor.h"
+#include "Components/ScriptComponent/ScriptComponent.h"
+#include "Components/CircleComponent.h"
 
 
 
 using namespace std;
 using namespace LuaPlus;
 
-
+/*
 void mouseClick(const Event& e) {
 	if (e.Handler == EventType::MouseEvent)
 	{
@@ -44,29 +48,26 @@ void keyboardPress(const Event& e)
 		GameEngine::GetInstance()->PrintOnWindow(message);
 	}
 }
-
+*/
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLine, INT nCmdShow)
 {
-	LuaState* pLuaState = LuaState::Create();
+
 
 	GameEngine* engine = GameEngine::GetInstance();
 	if (engine->InitInstance(hInstance, previousInstance, cmdLine, nCmdShow, "Our Game"))
 	{
-		Handler::GetInstance()->Subscribe(EventType::MouseEvent, &mouseClick);
-		Handler::GetInstance()->Subscribe(EventType::KeyboardEvent, &keyboardPress);
-		pLuaState->DoString("MyTable = { Hi = 5, Hello = 10, Yo = 6 }");
-
-		LuaObject obj = pLuaState->GetGlobals()["MyTable"];
-		for (LuaTableIterator it(obj); it; it.Next())
-		{
-			const char* key = it.GetKey().GetString();
-			int num = it.GetValue().GetInteger();
-			engine->PrintOnWindow(key);
-		}
+		/*Handler::GetInstance()->Subscribe(EventType::MouseEvent, &mouseClick);
+		Handler::GetInstance()->Subscribe(EventType::KeyboardEvent, &keyboardPress);*/
 		
+		Actor* actor = new Actor();
+		CircleComponent* aCircle = new CircleComponent(400, sf::Color::Blue);
+
+
+		actor->AddComponent(aCircle);
+		engine->AddActor(actor);
 		engine->Run();
+		
 	}
-	LuaState::Destroy(pLuaState);
-	pLuaState = NULL;
+	
 	return 0;
 }

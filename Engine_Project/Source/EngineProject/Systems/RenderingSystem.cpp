@@ -1,46 +1,54 @@
+#include <SFML/Graphics.hpp>
+#include "../Base/Actor.h"
+#include "../Base/ActorComponent.h"
 #include "RenderingSystem.h"
+#include "../Components/CircleComponent.h"
 
-RenderingSystem::RenderingSystem(HINSTANCE _hInstance, HINSTANCE _previousInstance, PSTR _cmdLine, INT _nCmdShow, string _szTitle)
+RenderingSystem::RenderingSystem(string _szTitle)
 {
-	hInstance = _hInstance;
-	previousInstance = _previousInstance;
-	cmdLine = _cmdLine;
-	nCmdShow = _nCmdShow;
 	szTitle = _szTitle;
 	WindowCreate();
 }
 
-RenderingSystem::~RenderingSystem() {}
+RenderingSystem::~RenderingSystem() {
+	delete window;
+}
 
 void RenderingSystem::WindowCreate()
 {
-	static TCHAR szWindowClass[] = _T("win32app");
-	WNDCLASSEX wcex;
-	wcex.cbSize = sizeof(WNDCLASSEX);
-	wcex.style = CS_HREDRAW | CS_VREDRAW;
-	wcex.lpfnWndProc = InputSystem::WndProc;
-	wcex.cbClsExtra = 0;
-	wcex.cbWndExtra = 0;
-	wcex.hInstance = hInstance;
-	wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
-	wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
-	wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-	wcex.lpszMenuName = NULL;
-	wcex.lpszClassName = szWindowClass;
-	wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
+	window = new sf::RenderWindow(sf::VideoMode(800, 800), szTitle);
+}
 
-	if (!RegisterClassEx(&wcex))
+void RenderingSystem::WindowClose()
+{
+	if (window) window->close();
+}
+
+bool RenderingSystem::IsWindowOpen()
+{
+	if (window) return window->isOpen();
+	return false;
+}
+
+void RenderingSystem::RenderSplashScreen() 
+{
+	window->clear();
+	window->display();
+}
+
+void RenderingSystem::RenderActors(vector<Actor*>* actors) {
+	window->clear();
+
+	for (std::vector<Actor*>::iterator it = actors->begin(); it != actors->end(); ++it) 
 	{
-
-		return;
+		if ((*it)->GetComponent("circleComponent"))
+		{
+			CircleComponent* cc = (CircleComponent*)(*it)->GetComponent("circleComponent");
+			sf::CircleShape shape(cc->GetRadius());
+			shape.setFillColor(cc->GetColor());
+			window->draw(shape, *(*it)->GetWorldTransform());
+		}
 	}
-	HWND hWnd = CreateWindow(szWindowClass, szTitle.c_str(), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 640, 640, NULL, NULL, hInstance, NULL);
 
-	if (!hWnd)
-	{
-
-		return;
-	}
-	ShowWindow(hWnd,nCmdShow);
-	UpdateWindow(hWnd);
+	window->display();
 }

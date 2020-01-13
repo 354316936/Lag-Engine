@@ -5,6 +5,7 @@
 #include <tchar.h>
 #include <string>
 #include "Systems/RenderingSystem.h"
+#include "Base/Actor.h"
 
 using namespace std;
 
@@ -26,13 +27,15 @@ private:
 	PSTR cmdLine;
 	INT nCmdShow;
 	string szTitle;
-	
+	vector<Actor*> actors;
 public:
 	static GameEngine* GetInstance();
 	bool InitInstance(HINSTANCE _hInstance, HINSTANCE _previousInstance, PSTR _cmdLine, INT _nCmdShow, string _szTitle);
 	void Print(string message);
-	void PrintOnWindow(string message);
 	void Run();
+	void AddActor(Actor* _actor);
+	void PrintToWindow(string message);
+
 };
 #endif
 

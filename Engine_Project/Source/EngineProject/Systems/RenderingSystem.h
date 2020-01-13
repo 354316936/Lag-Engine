@@ -1,25 +1,31 @@
-#pragma once
-#ifndef __RENDERING_SYSTEM_H__
-#define __RENDERING_SYSTEM_H__
+
 #include <windows.h>
 #include <tchar.h>
 #include <string>
-#include "InputSystem.h"
+#include <vector>
 
 using namespace std;
 
-class RenderingSystem 
+namespace sf {
+	class RenderWindow;
+}
+
+class Actor;
+
+
+class RenderingSystem
 {
-private: 
-	HINSTANCE hInstance; 
-	HINSTANCE previousInstance; 
-	PSTR cmdLine; 
-	INT nCmdShow;
+private:
 	string szTitle;
 
 public:
-	RenderingSystem(HINSTANCE _hInstance, HINSTANCE _previousInstance, PSTR _cmdLine, INT _nCmdShow, string _szTitle);
+	RenderingSystem(string _szTitle);
 	~RenderingSystem();
 	void WindowCreate();
+	void WindowClose();
+	bool IsWindowOpen();
+	void RenderSplashScreen();
+	void RenderActors(vector<Actor*>* actors);
+	sf::RenderWindow* window;
 };
-#endif 
+

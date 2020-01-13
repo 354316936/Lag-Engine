@@ -87,6 +87,15 @@
     <ClCompile Include="Components\VisualEffects.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="Components\TransformComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\CircleComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\ScriptSystem.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameEngine.h">
@@ -142,6 +151,18 @@
     </ClInclude>
     <ClInclude Include="Components\VisualEffects.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\TransformComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\ActorComponent.h">
+      <Filter>Base\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\CircleComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\ScriptSystem.h">
+      <Filter>Systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
