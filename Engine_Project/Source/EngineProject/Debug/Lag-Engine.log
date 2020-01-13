@@ -1,4 +1,20 @@
-﻿  GameEngine.cpp
+﻿  Actor.cpp
+  Handler.cpp
+  MainGameCode.cpp
+  AnimationComponent.cpp
+  AudioComponent.cpp
+  CircleComponent.cpp
+  CollisionsComponent.cpp
+  FrontEnd.cpp
+  NetworkingComponent.cpp
+  PhysicsComponent.cpp
+  RendererComponent.cpp
+  ScriptComponent.cpp
+  TransformComponent.cpp
+  VisualEffects.cpp
+  KeyboardE.cpp
+  MouseE.cpp
+  GameEngine.cpp
 e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(62): warning C4474: 'sprintf_s' : too many arguments passed for format string
   e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(62): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
 e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(78): warning C4474: 'sprintf_s' : too many arguments passed for format string
@@ -7,5 +23,11 @@ e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(84): warning C4
   e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(84): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
 e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(165): warning C4101: 'msg': unreferenced local variable
   main.cpp
+  InputSystem.cpp
+  RenderingSystem.cpp
+  Generating Code...
+e:\lag-engine\engine_project\source\engineproject\systems\inputsystem.cpp(55): warning C4715: 'InputSystem::WndProc': not all control paths return a value
+  Compiling...
+  ScriptSystem.cpp
   Generating Code...
   Lag-Engine.vcxproj -> E:\Lag-Engine\Engine_Project\Source\Debug\Lag-Engine.exe

@@ -81,10 +81,10 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)\ExternalDeps\SFML\include;$(ProjectDir)\ExternalDeps\LuaPlus\Source</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\ExtralLibrary\SFML\include;$(ProjectDir)\ExtralLibrary\LuaPlus\Source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(ProjectDir)\ExternalDeps\SFML\lib;$(ProjectDir)\ExternalDeps\LuaPlus\Lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\ExtralLibrary\SFML\lib;$(ProjectDir)\ExtralLibrary\LuaPlus\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>luaplus51-1201.lib;sfml-window.lib;sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
