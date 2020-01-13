@@ -1,11 +1,13 @@
+#include <SFML/Graphics.hpp>
 #include "GameEngine.h"
 #include <iostream>
 #include <windows.h>
-#include <direct.h> 
-#include <intrin.h> 
+#include <direct.h>
+#include <intrin.h>
 #include <strsafe.h>
 #include <tchar.h>
 #include <string>
+#include "Systems/ScriptSystem.h"
 
 using namespace std;
 
@@ -154,18 +156,26 @@ bool GameEngine::InitInstance(HINSTANCE _hInstance, HINSTANCE _previousInstance,
 
 	
 }
-void GameEngine::PrintOnWindow(string message)
-{
-	InputSystem::ChangeMessage(message);
-}
 
 void GameEngine::Run()
 {
-	RenderingSystem rs(hInstance, previousInstance, cmdLine, nCmdShow, szTitle);
+	RenderingSystem rs(szTitle);
+	ScriptSystem ss(&actors);
+
 	MSG msg;
-	while (GetMessage(&msg, NULL, 0, 0))
+	ss.Run();
+	while (rs.IsWindowOpen())
 	{
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+		sf::Event event;
+		while (rs.window->pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				rs.WindowClose();
+		}
+		rs.RenderActors(&actors);
 	}
+}
+void GameEngine::AddActor(Actor* _actor)
+{
+	actors.push_back(_actor);
 }

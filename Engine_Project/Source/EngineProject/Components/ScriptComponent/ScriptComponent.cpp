@@ -1,10 +1,13 @@
 #include "ScriptComponent.h"
-#pragma once
 
-ScriptComponent::ScriptComponent()
+ScriptComponent::ScriptComponent(string _path)
 {
+	path = _path;
+	componentName = "ScriptComponent";
+	CoCreateGuid(&id);
 }
 
-ScriptComponent::~ScriptComponent()
+string ScriptComponent::GetPath()
 {
+	return path;
 }

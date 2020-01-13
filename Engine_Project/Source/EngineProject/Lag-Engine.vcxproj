@@ -81,10 +81,11 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\ExternalDeps\SFML\include;$(ProjectDir)\ExternalDeps\LuaPlus\Source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(ProjectDir)\Luas\LuaPlus\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>luaplus51-1201.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\ExternalDeps\SFML\lib;$(ProjectDir)\ExternalDeps\LuaPlus\Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>luaplus51-1201.lib;sfml-window.lib;sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -129,12 +130,14 @@
     <ClCompile Include="Base\MainGameCode.cpp" />
     <ClCompile Include="Components\AnimationComponent.cpp" />
     <ClCompile Include="Components\AudioComponent.cpp" />
+    <ClCompile Include="Components\CircleComponent.cpp" />
     <ClCompile Include="Components\CollisionsComponent.cpp" />
     <ClCompile Include="Components\FrontEnd.cpp" />
     <ClCompile Include="Components\NetworkingComponent.cpp" />
     <ClCompile Include="Components\PhysicsComponent.cpp" />
     <ClCompile Include="Components\RendererComponent.cpp" />
     <ClCompile Include="Components\ScriptComponent\ScriptComponent.cpp" />
+    <ClCompile Include="Components\TransformComponent.cpp" />
     <ClCompile Include="Components\VisualEffects.cpp" />
     <ClCompile Include="Events\KeyboardE.cpp" />
     <ClCompile Include="Events\MouseE.cpp" />
@@ -142,26 +145,31 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Systems\InputSystem.cpp" />
     <ClCompile Include="Systems\RenderingSystem.cpp" />
+    <ClCompile Include="Systems\ScriptSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\Actor.h" />
+    <ClInclude Include="Base\ActorComponent.h" />
     <ClInclude Include="Base\Handler.h" />
     <ClInclude Include="Base\Event.h" />
     <ClInclude Include="Base\MainGameCode.h" />
     <ClInclude Include="Components\AnimationComponent.h" />
     <ClInclude Include="Components\AudioComponent.h" />
+    <ClInclude Include="Components\CircleComponent.h" />
     <ClInclude Include="Components\CollisionsComponent.h" />
     <ClInclude Include="Components\FrontEnd.h" />
     <ClInclude Include="Components\NetworkingComponent.h" />
     <ClInclude Include="Components\PhysicsComponent.h" />
     <ClInclude Include="Components\RendererComponent.h" />
     <ClInclude Include="Components\ScriptComponent\ScriptComponent.h" />
+    <ClInclude Include="Components\TransformComponent.h" />
     <ClInclude Include="Components\VisualEffects.h" />
     <ClInclude Include="Events\KeyboardE.h" />
     <ClInclude Include="Events\MouseE.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="Systems\InputSystem.h" />
     <ClInclude Include="Systems\RenderingSystem.h" />
+    <ClInclude Include="Systems\ScriptSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
