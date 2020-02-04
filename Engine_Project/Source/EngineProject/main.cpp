@@ -62,21 +62,33 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLi
 
 		
 		Actor* sun = new Actor();
-		sun->AddComponent(new CircleComponent(20, sf::Color::Yellow));
+		CircleComponent* yellowCircle = new CircleComponent(20, sf::Color::Yellow);
+		sun->AddComponent(yellowCircle);
+
 		Actor* earth = new Actor();
-		earth->AddComponent(new CircleComponent(20, sf::Color::Blue));
+		CircleComponent* blueCircle = new CircleComponent(20, sf::Color::Blue);
+		earth->AddComponent(blueCircle);
+
+		Actor* moon = new Actor();
+		CircleComponent* whiteCircle = new CircleComponent(10, sf::Color::White);
+		moon->AddComponent(whiteCircle);
+
 		sun->AddChild(earth);
+		earth->AddChild(moon);
 
+		//moon->transComp->Translate(50, 0);
+		//moon->transComp->Scale(0.3, 0.3);
 
-		earth->transComp->Translate(100, 0);
+		earth->transComp->Translate(50, 0);
 		earth->transComp->Scale(0.5, 0.5);
 
-		
 		sun->transComp->Translate(100, 500);
 		sun->transComp->Scale(5, 5);
 
 		engine->AddActor(sun);
 		engine->AddActor(earth);
+		engine->AddActor(moon);
+
 		engine->Run();
 		
 	}

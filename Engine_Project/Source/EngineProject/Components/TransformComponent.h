@@ -13,13 +13,10 @@ public:
 	void Scale(float x, float y);
 	sf::Transform transform;
 private:
+	sf::Transform m_translate;
+	sf::Transform m_rotation;
+	sf::Transform m_scale;
 	void UpdateTransform();
-	float rotationv;
-	sf::Vector2<float> translationv;
-	sf::Vector2<float> scalev;
-	sf::Transform translate;
-	sf::Transform rotation;
-	sf::Transform scale;
 };
 
 #endif 

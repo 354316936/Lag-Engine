@@ -127,7 +127,6 @@
   <ItemGroup>
     <ClCompile Include="Base\Actor.cpp" />
     <ClCompile Include="Base\Handler.cpp" />
-    <ClCompile Include="Base\MainGameCode.cpp" />
     <ClCompile Include="Components\AnimationComponent.cpp" />
     <ClCompile Include="Components\AudioComponent.cpp" />
     <ClCompile Include="Components\CircleComponent.cpp" />
@@ -152,7 +151,6 @@
     <ClInclude Include="Base\ActorComponent.h" />
     <ClInclude Include="Base\Handler.h" />
     <ClInclude Include="Base\Event.h" />
-    <ClInclude Include="Base\MainGameCode.h" />
     <ClInclude Include="Components\AnimationComponent.h" />
     <ClInclude Include="Components\AudioComponent.h" />
     <ClInclude Include="Components\CircleComponent.h" />

@@ -17,10 +17,10 @@ void ScriptSystem::Run()
 	vector<Actor*>::iterator it;
 	for (it = actors->begin(); it != actors->end(); it++)
 	{
-		ActorComponent* ac = (*it)->GetComponent("ScriptComponent");
-		if (ac)
+		ActorComponent* m_ac = (*it)->GetComponent("ScriptComponent");
+		if (m_ac)
 		{
-			ScriptComponent* sc2 = (ScriptComponent*)ac;
+			ScriptComponent* m_sc = (ScriptComponent*)m_ac;
 		
 			
 		}

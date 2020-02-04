@@ -45,9 +45,6 @@
     <ClCompile Include="Base\Actor.cpp">
       <Filter>Base\Actor</Filter>
     </ClCompile>
-    <ClCompile Include="Base\MainGameCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Systems\InputSystem.cpp">
       <Filter>Systems</Filter>
     </ClCompile>
@@ -109,9 +106,6 @@
     </ClInclude>
     <ClInclude Include="Base\Actor.h">
       <Filter>Base\Actor</Filter>
-    </ClInclude>
-    <ClInclude Include="Base\MainGameCode.h">
-      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Systems\InputSystem.h">
       <Filter>Systems</Filter>

@@ -5,7 +5,7 @@
 
 Actor::Actor()
 {
-	CoCreateGuid(&id);
+	
 	parent = NULL;
 	transComp = new TransformComponent();
 	worldTransform = new sf::Transform();
@@ -41,6 +41,21 @@ ActorComponent* Actor::GetComponent(string componentName)
 void Actor::SetTransform(sf::Transform matrix)
 {
 	*localTransform = matrix;
+}
+
+sf::Transform * Actor::GetLocalTransform()
+{
+	return localTransform;
+}
+
+sf::Transform * Actor::GetWorldTransform()
+{
+	return worldTransform;
+}
+
+void Actor::SetParent(Actor * m_p)
+{
+	parent = m_p;
 }
 
 void Actor::AddChild(Actor* s)

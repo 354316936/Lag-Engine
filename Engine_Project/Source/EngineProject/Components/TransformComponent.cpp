@@ -2,53 +2,38 @@
 
 TransformComponent::TransformComponent()
 {
-	//transforms
-	translate.translate(0, 0);
-	rotation.rotate(0);
-	scale.scale(1, 1);
-	//user values (vector, angle in degrees, vector)
-	translationv = sf::Vector2<float>(0, 0);
-	rotationv = 0;
-	scalev = sf::Vector2<float>(0, 0);
-	//updating the main matrix
-	transform = translate * rotation * scale;
-	//transform = scale * rotation * translate;
+	m_translate.translate(0, 0);
+	m_rotation.rotate(0);
+	m_scale.scale(1, 1);
+	UpdateTransform();
 	componentID = "transform";
 }
 
 TransformComponent::TransformComponent(sf::Vector2<float> trans, float angle, sf::Vector2<float> scal)
 {
-	translate.translate(trans.x, trans.y);
-	rotation.rotate(angle);
-	scale.scale(scal.x, scal.y);
-	translationv = sf::Vector2<float>(trans.x, trans.y);
-	rotationv = angle;
-	scalev = sf::Vector2<float>(scal.x, scal.y);
-	transform = translate * rotation * scale;
-	//transform = scale * rotation * translate;
+	m_translate.translate(trans.x, trans.y);
+	m_rotation.rotate(angle);
+	m_scale.scale(scal.x, scal.y);
+	UpdateTransform();
 	componentID = "transform";
 }
 void TransformComponent::Translate(float x, float y)
 {
-	translate.translate(x, y);
-	translationv += sf::Vector2<float>(x, y);
+	m_translate.translate(x, y);
 	UpdateTransform();
 }
 void TransformComponent::Rotate(float angle)
 {
-	rotation.rotate(angle);
-	rotationv += angle;
+	m_rotation.rotate(angle);
 	UpdateTransform();
 }
 void TransformComponent::Scale(float x, float y)
 {
-	scale.scale(x, y);
-	scalev += sf::Vector2<float>(x, y);
+	m_scale.scale(x, y);
 	UpdateTransform();
 }
 
 void TransformComponent::UpdateTransform()
 {
-	transform = translate * rotation * scale;
-	//transform = scale * rotation * translate;
+	transform = m_translate * m_rotation * m_scale;
 }

@@ -14,7 +14,6 @@ class TransformComponent;
 class Actor
 {
 private:
-	GUID id;
 	vector<ActorComponent*> components;
 
 public:
@@ -23,9 +22,9 @@ public:
 	void AddComponent(ActorComponent* _component);
 	ActorComponent* GetComponent(string componentName);
 	void SetTransform(sf::Transform matrix);
-	sf::Transform* GetLocalTransform() { return localTransform; }
-	sf::Transform* GetWorldTransform() { return worldTransform; }
-	void SetParent(Actor* p) { parent = p; }
+	sf::Transform* GetLocalTransform(); 
+	sf::Transform* GetWorldTransform(); 
+	void SetParent(Actor* m_p);
 	void AddChild(Actor* s);
 	virtual void Update(float msec);
 	TransformComponent* transComp;

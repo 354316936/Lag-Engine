@@ -8,7 +8,6 @@ using namespace std;
 class ActorComponent
 {
 public:
-	GUID id;
 	string componentID;
 };
 
