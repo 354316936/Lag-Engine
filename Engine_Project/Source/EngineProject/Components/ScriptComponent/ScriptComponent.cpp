@@ -3,7 +3,7 @@
 ScriptComponent::ScriptComponent(string _path)
 {
 	path = _path;
-	componentName = "ScriptComponent";
+	componentID = "Script";
 	CoCreateGuid(&id);
 }
 

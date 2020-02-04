@@ -1,0 +1,32 @@
+﻿  Actor.cpp
+e:\lag-engine\engine_project\source\engineproject\components\transformcomponent.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics/Transform.hpp': No such file or directory
+  Handler.cpp
+  MainGameCode.cpp
+  AnimationComponent.cpp
+  AudioComponent.cpp
+  CircleComponent.cpp
+e:\lag-engine\engine_project\source\engineproject\components\circlecomponent.cpp(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  CollisionsComponent.cpp
+  FrontEnd.cpp
+  NetworkingComponent.cpp
+  PhysicsComponent.cpp
+  RendererComponent.cpp
+  ScriptComponent.cpp
+  TransformComponent.cpp
+e:\lag-engine\engine_project\source\engineproject\components\transformcomponent.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics/Transform.hpp': No such file or directory
+  VisualEffects.cpp
+  KeyboardE.cpp
+  MouseE.cpp
+  GameEngine.cpp
+e:\lag-engine\engine_project\source\engineproject\gameengine.cpp(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  main.cpp
+e:\lag-engine\engine_project\source\engineproject\main.cpp(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  InputSystem.cpp
+e:\lag-engine\engine_project\source\engineproject\systems\inputsystem.cpp(21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  RenderingSystem.cpp
+e:\lag-engine\engine_project\source\engineproject\systems\renderingsystem.cpp(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Generating Code...
+e:\lag-engine\engine_project\source\engineproject\systems\inputsystem.cpp(55): warning C4715: 'InputSystem::WndProc': not all control paths return a value
+  Compiling...
+  ScriptSystem.cpp
+  Generating Code...

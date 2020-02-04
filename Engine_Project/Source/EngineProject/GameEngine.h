@@ -34,8 +34,6 @@ public:
 	void Print(string message);
 	void Run();
 	void AddActor(Actor* _actor);
-	void PrintToWindow(string message);
-
 };
 #endif
 

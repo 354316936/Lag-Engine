@@ -5,28 +5,28 @@ CircleComponent::CircleComponent()
 {
 	radius = 10;
 	color = sf::Color::Green;
-	componentName = "circleComponent";
+	componentID = "circleComponent";
 }
 
 CircleComponent::CircleComponent(float r)
 {
 	radius = r;
 	color = sf::Color::Green;
-	componentName = "circleComponent";
+	componentID = "circleComponent";
 }
 
 CircleComponent::CircleComponent(sf::Color c)
 {
 	radius = 10;
 	color = c;
-	componentName = "circleComponent";
+	componentID = "circleComponent";
 }
 
 CircleComponent::CircleComponent(float r, sf::Color c)
 {
 	radius = r;
 	color = c;
-	componentName = "circleComponent";
+	componentID = "circleComponent";
 }
 
 void CircleComponent::SetRadius(float r)

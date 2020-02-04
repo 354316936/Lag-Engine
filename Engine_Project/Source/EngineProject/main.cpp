@@ -9,6 +9,8 @@
 #include "Base/Actor.h"
 #include "Components/ScriptComponent/ScriptComponent.h"
 #include "Components/CircleComponent.h"
+#include "Components/TransformComponent.h"
+
 
 
 
@@ -51,20 +53,30 @@ void keyboardPress(const Event& e)
 */
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLine, INT nCmdShow)
 {
-
-
 	GameEngine* engine = GameEngine::GetInstance();
 	if (engine->InitInstance(hInstance, previousInstance, cmdLine, nCmdShow, "Our Game"))
 	{
 		/*Handler::GetInstance()->Subscribe(EventType::MouseEvent, &mouseClick);
 		Handler::GetInstance()->Subscribe(EventType::KeyboardEvent, &keyboardPress);*/
+
+
 		
-		Actor* actor = new Actor();
-		CircleComponent* aCircle = new CircleComponent(400, sf::Color::Blue);
+		Actor* sun = new Actor();
+		sun->AddComponent(new CircleComponent(20, sf::Color::Yellow));
+		Actor* earth = new Actor();
+		earth->AddComponent(new CircleComponent(20, sf::Color::Blue));
+		sun->AddChild(earth);
 
 
-		actor->AddComponent(aCircle);
-		engine->AddActor(actor);
+		earth->transComp->Translate(100, 0);
+		earth->transComp->Scale(0.5, 0.5);
+
+		
+		sun->transComp->Translate(100, 500);
+		sun->transComp->Scale(5, 5);
+
+		engine->AddActor(sun);
+		engine->AddActor(earth);
 		engine->Run();
 		
 	}

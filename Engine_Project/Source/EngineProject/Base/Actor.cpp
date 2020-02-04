@@ -7,9 +7,9 @@ Actor::Actor()
 {
 	CoCreateGuid(&id);
 	parent = NULL;
-	tc = new TransformComponent();
-	worldTransform = &(tc->transform);
-	localTransform = &(tc->transform);
+	transComp = new TransformComponent();
+	worldTransform = new sf::Transform();
+	localTransform = &(transComp->transform);
 }
 
 Actor::~Actor(void)
@@ -30,7 +30,7 @@ ActorComponent* Actor::GetComponent(string componentName)
 	vector<ActorComponent*>::iterator it;
 	for (it = components.begin(); it != components.end(); it++)
 	{
-		if ((*it)->componentName == componentName)
+		if ((*it)->componentID == componentName)
 		{
 			return *it;
 		}
@@ -46,21 +46,17 @@ void Actor::SetTransform(sf::Transform matrix)
 void Actor::AddChild(Actor* s)
 {
 	children.push_back(s);
-	s->parent = this;
+	s->SetParent(this);
 }
 
 void Actor::Update(float msec)
 {
 	if (parent)
-	{ 
+	{
 		*worldTransform = *(parent->worldTransform) * *(localTransform);
 	}
 	else
 	{
 		worldTransform = localTransform;
-	}
-	for (vector<Actor*>::iterator i = children.begin(); i != children.end(); ++i)
-	{
-		(*i)->Update(msec);
 	}
 }

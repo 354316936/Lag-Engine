@@ -9,7 +9,7 @@ class ActorComponent
 {
 public:
 	GUID id;
-	string componentName;
+	string componentID;
 };
 
 #endif 
