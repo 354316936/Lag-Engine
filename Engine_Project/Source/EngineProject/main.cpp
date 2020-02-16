@@ -59,7 +59,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE previousInstance, PSTR cmdLi
 		/*Handler::GetInstance()->Subscribe(EventType::MouseEvent, &mouseClick);
 		Handler::GetInstance()->Subscribe(EventType::KeyboardEvent, &keyboardPress);*/
 
-
+		  
 		
 		Actor* sun = new Actor();
 		CircleComponent* yellowCircle = new CircleComponent(20, sf::Color::Yellow);
