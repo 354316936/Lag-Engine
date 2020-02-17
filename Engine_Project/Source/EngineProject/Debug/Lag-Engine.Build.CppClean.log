@@ -1,5 +1,6 @@
 e:\lag-engine\engine_project\source\engineproject\debug\vc141.pdb
 e:\lag-engine\engine_project\source\engineproject\debug\vc141.idb
+e:\lag-engine\engine_project\source\engineproject\debug\scriptsystem.obj
 e:\lag-engine\engine_project\source\engineproject\debug\renderingsystem.obj
 e:\lag-engine\engine_project\source\engineproject\debug\inputsystem.obj
 e:\lag-engine\engine_project\source\engineproject\debug\main.obj
@@ -14,13 +15,12 @@ e:\lag-engine\engine_project\source\engineproject\debug\physicscomponent.obj
 e:\lag-engine\engine_project\source\engineproject\debug\networkingcomponent.obj
 e:\lag-engine\engine_project\source\engineproject\debug\frontend.obj
 e:\lag-engine\engine_project\source\engineproject\debug\collisionscomponent.obj
+e:\lag-engine\engine_project\source\engineproject\debug\circlecomponent.obj
 e:\lag-engine\engine_project\source\engineproject\debug\audiocomponent.obj
 e:\lag-engine\engine_project\source\engineproject\debug\animationcomponent.obj
-e:\lag-engine\engine_project\source\engineproject\debug\maingamecode.obj
 e:\lag-engine\engine_project\source\engineproject\debug\handler.obj
 e:\lag-engine\engine_project\source\engineproject\debug\actor.obj
-e:\lag-engine\engine_project\source\engineproject\debug\scriptsystem.obj
-e:\lag-engine\engine_project\source\engineproject\debug\circlecomponent.obj
+e:\lag-engine\engine_project\source\engineproject\debug\myfunctions.obj
 e:\lag-engine\engine_project\source\debug\lag-engine.exe
 e:\lag-engine\engine_project\source\debug\lag-engine.ilk
 e:\lag-engine\engine_project\source\debug\lag-engine.pdb

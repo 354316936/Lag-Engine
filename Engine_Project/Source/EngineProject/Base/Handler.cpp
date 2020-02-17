@@ -1,6 +1,6 @@
 #include "Handler.h"
 
-Handler* Handler::instance=0;
+Handler* Handler::instance = 0;
 
 Handler::Handler() {}
 
@@ -11,25 +11,18 @@ Handler* Handler::GetInstance()
 	return instance;
 }
 
-void Handler::Subscribe(const EventType handler, SlotType&& slot)
-{
-	observers[handler].push_back(slot);
-}
-
-void Handler::Subscribe(const EventType handler, void(*slot)(const Event& e))
+void Handler::Subscribe(const EventType descriptor, void(*slot)(const Event& e))
 {
 
-	observers2[handler].push_back(slot);
+	observers[descriptor].push_back(slot);
 }
+
 void Handler::Post(const Event& event)
 {
 	EventType type = event.Handler;
-
-	if (observers2.find(type) == observers2.end())
+	if (observers.find(type) == observers.end())
 		return;
-
-	auto&& listOfFunctions = observers2.at(type);
-
+	auto&& listOfFunctions = observers.at(type);
 	for (auto&& theFunction : listOfFunctions)
 		theFunction(event);
 }

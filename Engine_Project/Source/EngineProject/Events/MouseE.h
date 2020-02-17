@@ -2,14 +2,14 @@
 #define __MOUSEE_H__
 
 #include "../Base/Event.h"
-
+#include <string>
+using namespace std;
 class MouseE : public Event
 {
 public:
-	int x;
-	int y;
-	bool leftClick;
-	MouseE(int _x, int _y, bool _leftClick);
+	MouseE();
+	//MouseE(int _x, int _y, bool _leftClick);
+
 };
 
 #endif

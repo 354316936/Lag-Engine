@@ -12,10 +12,9 @@ using namespace std;
 class InputSystem
 {
 private:
-	static TCHAR WindowText[1000];
+	sf::RenderWindow* window;
 public:
-	static LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM param, LPARAM lparam);
-	static void ChangeMessage(string message);
+	InputSystem(sf::RenderWindow* _window);
+	bool Update();
 };
-
 #endif 

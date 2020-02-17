@@ -8,6 +8,8 @@
 #include <tchar.h>
 #include <string>
 #include "Systems/ScriptSystem.h"
+#include "Systems/InputSystem.h"
+#include "Components/TimeComponent.h"
 #include <time.h>
 using namespace std;
 
@@ -28,6 +30,7 @@ void GameEngine::Print(string message)
 	message += "\n";
 	char buf[1000];
 	sprintf_s(buf, message.c_str());
+	OutputDebugStringA(buf);
 }
 bool GameEngine::IsOnlyInstance(LPCTSTR gameTitle)
 {
@@ -134,14 +137,11 @@ void GameEngine::ReadCPU()
 	Print(cpuType);
 }
 
-bool GameEngine::InitInstance(HINSTANCE _hInstance, HINSTANCE _previousInstance, PSTR _cmdLine, INT _nCmdShow, string _szTitle)
+bool GameEngine::InitInstance(string _szTitle)
 {
-	hInstance = _hInstance;
-	previousInstance = _previousInstance;
-	cmdLine = _cmdLine;
-	nCmdShow = _nCmdShow;
-	szTitle = _szTitle;
 
+	szTitle = _szTitle;
+	my_window = new sf::RenderWindow(sf::VideoMode(800, 800), szTitle);
 	if (IsOnlyInstance(szTitle.c_str()))
 	{
 		Print("Starting system check...");
@@ -159,28 +159,22 @@ bool GameEngine::InitInstance(HINSTANCE _hInstance, HINSTANCE _previousInstance,
 
 void GameEngine::Run()
 {
-	RenderingSystem rs(szTitle);
+	RenderingSystem rs(my_window);
 	ScriptSystem ss(&actors);
-
-	MSG msg;
+	InputSystem is(my_window);
 	ss.Run();
-	float oldTime = 0;
-	float deltaTime;
+	TimeComponent tc;
+	float deltaTime = tc.getDeltaTime();
 	while (rs.IsWindowOpen())
 	{
-		sf::Event event;
-		while (rs.window->pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				rs.WindowClose();
-		}
+		
+		is.Update();
 
-		deltaTime = clock() - oldTime;
-		oldTime = clock();
 		for (std::vector<Actor*>::iterator it = actors.begin(); it != actors.end(); ++it)
 		{
 			(*it)->Update(deltaTime);
 		}
+
 		rs.RenderActors(&actors);
 	}
 }

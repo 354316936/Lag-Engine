@@ -4,7 +4,8 @@
 enum EventType
 {
 	MouseEvent,
-	KeyboardEvent
+	KeyboardEvent,
+	PLUS
 };
 
 class Event

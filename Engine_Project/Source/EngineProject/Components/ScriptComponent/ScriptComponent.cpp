@@ -3,7 +3,7 @@
 ScriptComponent::ScriptComponent(string _path)
 {
 	path = _path;
-	componentID = "Script";
+	componentID = "ScriptComponent";
 }
 
 string ScriptComponent::GetPath()

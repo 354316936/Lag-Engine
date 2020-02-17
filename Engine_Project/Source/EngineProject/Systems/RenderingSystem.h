@@ -15,16 +15,12 @@ class Actor;
 
 class RenderingSystem
 {
-private:
-	string szTitle;
 
 public:
-	RenderingSystem(string _szTitle);
+	RenderingSystem(sf::RenderWindow* _window);
 	~RenderingSystem();
-	void WindowCreate();
 	void WindowClose();
 	bool IsWindowOpen();
-	void RenderSplashScreen();
 	void RenderActors(vector<Actor*>* actors);
 	sf::RenderWindow* window;
 };

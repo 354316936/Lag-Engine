@@ -1,2 +1,3 @@
 ﻿  main.cpp
+e:\lag-engine\engine_project\source\engineproject\main.cpp(53): warning C4305: 'argument': truncation from 'double' to 'float'
   Lag-Engine.vcxproj -> E:\Lag-Engine\Engine_Project\Source\Debug\Lag-Engine.exe

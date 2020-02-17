@@ -28,9 +28,10 @@ private:
 	INT nCmdShow;
 	string szTitle;
 	vector<Actor*> actors;
+	sf::RenderWindow* my_window;
 public:
 	static GameEngine* GetInstance();
-	bool InitInstance(HINSTANCE _hInstance, HINSTANCE _previousInstance, PSTR _cmdLine, INT _nCmdShow, string _szTitle);
+	bool InitInstance(string _szTitle);
 	void Print(string message);
 	void Run();
 	void AddActor(Actor* _actor);
