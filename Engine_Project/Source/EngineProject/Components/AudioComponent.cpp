@@ -2,6 +2,7 @@
 
 bool AudioComponent::playMusic(string _path, bool loop)
 {
+
 	sf::Music music;
 	music.openFromFile(_path);
 	music.setLoop(loop);
