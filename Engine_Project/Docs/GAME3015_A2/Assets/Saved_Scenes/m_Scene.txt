@@ -1,0 +1,4 @@
+{"type":"Cube","name":"Cube","position":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0},"rotation":{"x":0.0,"y":0.0,"z":0.0}}
+{"type":"Sphere","name":"Sphere","position":{"x":-2.950000047683716,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0},"rotation":{"x":0.0,"y":0.0,"z":0.0}}
+{"type":"Capsule","name":"Capsule","position":{"x":3.0199999809265138,"y":0.019999999552965165,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0},"rotation":{"x":0.0,"y":0.0,"z":0.0}}
+{"type":"Cylinder","name":"Cylinder","position":{"x":0.0,"y":2.7799999713897707,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0},"rotation":{"x":0.0,"y":0.0,"z":0.0}}
