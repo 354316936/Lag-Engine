@@ -8,7 +8,7 @@ class MouseE : public Event
 {
 public:
 	MouseE();
-	//MouseE(int _x, int _y, bool _leftClick);
+	MouseE(int _x, int _y, bool _leftClick);
 
 };
 

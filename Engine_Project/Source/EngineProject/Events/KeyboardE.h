@@ -6,11 +6,12 @@
 class KeyboardE : public Event
 {
 public:
-	/*int keyInt;
+	int keyInt;
 	char keyChar;
 	bool isChar;
 	KeyboardE(int _keyInt);
-	KeyboardE(char _keyChar);*/
+	KeyboardE(char _keyChar);
+
 	KeyboardE();
 };
 
